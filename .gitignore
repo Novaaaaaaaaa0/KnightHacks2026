@@ -25,3 +25,4 @@ mono_crash.*.json
 # *.pck
 
 .DS_Store
+.DS_Store
