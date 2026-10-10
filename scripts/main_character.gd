@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed = 100
 @onready var gretta_sprite = $CollisionShape2D/AnimatedSprite2D
+var direction: String
 
 func get_input():
 	var input_direction = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
@@ -15,27 +16,33 @@ func _physics_process(_delta: float) -> void:
 # Most Inefficient animation code in the world
 func _process(_delta):
 	
-	#moving down
-	if Input.is_action_pressed("moveDown"):
-		gretta_sprite.play("Front Walking")
-	if Input.is_action_just_pressed("moveDown"):
-		gretta_sprite.play("Front Standing")
-		
-	# moving up
-	if Input.is_action_pressed("moveUp"):
-		gretta_sprite.play("Back Walking")
-	if Input.is_action_just_pressed("moveUp"):
-		gretta_sprite.play("Back Standing")
-		
-	# moving left
-	if Input.is_action_pressed("moveLeft"):
-		gretta_sprite.play("Left Walking")
-	if Input.is_action_just_pressed("moveLeft"):
-		gretta_sprite.play("Left Standing")
-		
-	# moving right
-	if Input.is_action_pressed("moveRight"):
-		gretta_sprite.play("Right Walking")
-	if Input.is_action_just_pressed("moveRight"):
-		gretta_sprite.play("Right Standing")
-		
+	var moving: bool = (Input.is_action_pressed("moveDown") || Input.is_action_just_pressed("moveUp") || Input.is_action_pressed("moveLeft") || Input.is_action_pressed("moveRight"))
+
+	if moving:
+		#moving down
+		if Input.is_action_pressed("moveDown"):
+			gretta_sprite.play("Front Walking")	
+			direction = "up"
+		# moving up
+		if Input.is_action_pressed("moveUp"):
+			gretta_sprite.play("Back Walking")
+			direction = "down"
+		# moving left
+		if Input.is_action_pressed("moveLeft"):
+			gretta_sprite.play("Left Walking")
+			direction = "left"
+		# moving right
+		if Input.is_action_pressed("moveRight"):
+			gretta_sprite.play("Right Walking")
+			direction = "right"
+	
+	else:
+		match direction:
+			"down":
+				gretta_sprite.play("Back Standing")
+			"up":
+				gretta_sprite.play("Front Standing")
+			"left":
+				gretta_sprite.play("Left Standing")
+			"right":
+				gretta_sprite.play("Right Standing")
