@@ -27,8 +27,7 @@ animation = &"Left Interact"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1234509425]
 position = Vector2(-2, 1)
-zoom = Vector2(5, 5)
+zoom = Vector2(3, 3)
 process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
-editor_draw_limits = true
