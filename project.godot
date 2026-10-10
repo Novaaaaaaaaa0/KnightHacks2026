@@ -28,7 +28,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/save_system/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 

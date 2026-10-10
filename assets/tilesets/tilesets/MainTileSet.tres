@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" format=3 uid="uid://bgorcl8vwoei1"]
 
-[ext_resource type="Texture2D" uid="uid://dlfup12i8s60o" path="res://assets/ForgottenMemories/TileSet.png" id="1_dh12v"]
-[ext_resource type="Texture2D" uid="uid://ckbng0qo4tijc" path="res://assets/ForgottenMemories/Trees.png" id="2_2m8bo"]
-[ext_resource type="Texture2D" uid="uid://c66wpohn280wa" path="res://assets/ForgottenMemories/Trees_seperated.png" id="3_ahs4n"]
-[ext_resource type="Texture2D" uid="uid://c3dcuvfqw65sg" path="res://assets/ForgottenMemories/WaterTiles-6frames.png" id="4_7edsj"]
-[ext_resource type="Texture2D" uid="uid://dw7il3smhwths" path="res://assets/ForgottenMemories/Props.png" id="5_q6r54"]
+[ext_resource type="Texture2D" uid="uid://c2m5mi1tdivjj" path="res://assets/ForgottenMemories/TileSet.png" id="1_dh12v"]
+[ext_resource type="Texture2D" uid="uid://dml25xasdry01" path="res://assets/ForgottenMemories/Trees.png" id="2_2m8bo"]
+[ext_resource type="Texture2D" uid="uid://crpv1rshhvpjt" path="res://assets/ForgottenMemories/Trees_seperated.png" id="3_ahs4n"]
+[ext_resource type="Texture2D" uid="uid://bj8asdo6a207o" path="res://assets/ForgottenMemories/WaterTiles-6frames.png" id="4_7edsj"]
+[ext_resource type="Texture2D" uid="uid://c55ar8k4b7yy3" path="res://assets/ForgottenMemories/Props.png" id="5_q6r54"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khdp1"]
 texture = ExtResource("1_dh12v")
