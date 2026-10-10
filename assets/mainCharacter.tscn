@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://wr1deivfc0wv"]
 
 [ext_resource type="Script" uid="uid://bes5usw62i327" path="res://scripts/main_character.gd" id="1_1iwj0"]
-[ext_resource type="Texture2D" uid="uid://bhkvlatrgf3uw" path="res://assets/Gretta Sprites/RBG RPG Gretta.png" id="2_xhxfj"]
-[ext_resource type="SpriteFrames" uid="uid://cgxw6nq5sr5rj" path="res://assets/Gretta Sprites/gretta_sprite_frames.tres" id="3_1mvck"]
+[ext_resource type="Texture2D" uid="uid://ckq0gvhs6p8sj" path="res://assets/sprites/RBG RPG Gretta.png" id="2_xhxfj"]
+[ext_resource type="SpriteFrames" uid="uid://cgxw6nq5sr5rj" path="res://assets/sprites/gretta_sprite_frames.tres" id="3_1mvck"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trt31"]
 size = Vector2(13, 20)

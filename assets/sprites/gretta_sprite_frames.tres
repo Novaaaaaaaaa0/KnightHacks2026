@@ -1,0 +1,130 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cgxw6nq5sr5rj"]
+
+[ext_resource type="Texture2D" uid="uid://c3hyf4nrm5pjf" path="res://assets/sprites/Gretta sprite sheet 2.0.png" id="1_fm13a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it0q0"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lfqa"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rytje"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pddx"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvg42"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u2n6"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnttq"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msm6p"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6xcs"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adw0g"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mx70g"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfjcw"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(32, 96, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it0q0")
+}],
+"loop": 1,
+"name": &"Back Standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_4lfqa")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_rytje")
+}],
+"loop": 1,
+"name": &"Back Walking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pddx")
+}],
+"loop": 1,
+"name": &"Front Standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_bvg42")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_0u2n6")
+}],
+"loop": 1,
+"name": &"Front Walking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnttq")
+}],
+"loop": 1,
+"name": &"Left Standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_msm6p")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_u6xcs")
+}],
+"loop": 1,
+"name": &"Left Walking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adw0g")
+}],
+"loop": 1,
+"name": &"Right Standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_mx70g")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_pfjcw")
+}],
+"loop": 1,
+"name": &"Right Walking",
+"speed": 5.0
+}]
