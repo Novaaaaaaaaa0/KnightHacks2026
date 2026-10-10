@@ -1,7 +1,12 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://dx500ndh5t8v2"]
 
-[ext_resource type="Shader" uid="uid://b164lu2oanfna" path="res://assets/shaders/title_menu_shaders.gdshader" id="1_6offa"]
+[ext_resource type="Shader" uid="uid://bv0x6iecbvljm" path="res://assets/shaders/shaders/redShader.gdshader" id="1_ud6no"]
 
 [resource]
-shader = ExtResource("1_6offa")
-shader_parameter/weighted = true
+shader = ExtResource("1_ud6no")
+shader_parameter/threshold_r = 0.122000005795
+shader_parameter/threshold_g = 0.09600000456
+shader_parameter/threshold_b = 0.0970000046075
+shader_parameter/threshold = 0.0
+shader_parameter/spare_color = Color(0.4732983, 0.25100338, 0.22955707, 1)
+shader_parameter/tolerance = 0.2550000121125
