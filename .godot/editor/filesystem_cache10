@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1791663859
+::res://::1791664385
 icon.svg::CompressedTexture2D::7073408813545462791::1791662968::1791663859::1::::<><><>0<>0<>a7346864cf2d01dc381382a70f046145<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1791662968::0::1::::<><><>0<>0<><>::
 ::res://addons/::1791663859
@@ -8,7 +8,7 @@ plugin_logo.png::CompressedTexture2D::7688752142866580147::1791662968::179166385
 plugin_save_system.gd::GDScript::478495610302073669::1791662968::0::1::::<>EditorPlugin<><>0<>1<><>::
 save_system.gd::GDScript::4520569248414924625::1791662968::0::1::::<>Node<><>0<>0<><>::
 updateSave.gd::GDScript::9214986645332703380::1791662968::0::1::::SaveGame<>Node<><>0<>0<><>::
-::res://assets/::1791663485
+::res://assets/::1791663916
 gretta_animation.gd::GDScript::7460276915935916128::1791662968::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://assets/backgrounds/::1791662977
 ::res://assets/backgrounds/Pine Hills/::1791662977
@@ -39,19 +39,19 @@ WaterTiles-6frames.png::CompressedTexture2D::3086277067216554858::1791662968::17
 ::res://assets/shaders/shaders/::1791662977
 title_menu_shaders.gdshader::Shader::4277107857994312630::1791662968::0::1::::<><><>0<>0<><>::
 title_menu_shaders.tres::ShaderMaterial::8837100044839514113::1791662968::0::1::::<><><>0<>0<><>::uid://b164lu2oanfna::::res://assets/shaders/title_menu_shaders.gdshader
-::res://assets/sprites/::1791663859
+::res://assets/sprites/::1791664001
 Gretta sprite sheet 2.0.png::CompressedTexture2D::6754047314374693507::1791662968::1791663859::1::::<><><>0<>0<>a884e49f04eb7a2d780c515749f60034<>res://.godot/imported/Gretta sprite sheet 2.0.png-55c7932d3681a08dc677f193e9290106.ctex::
-gretta_sprite_frames.tres::SpriteFrames::5242846959917927979::1791663915::0::1::::<><><>0<>0<><>::uid://c3hyf4nrm5pjf::::res://assets/sprites/Gretta sprite sheet 2.0.png
+gretta_sprite_frames.tres::SpriteFrames::5242846959917927979::1791664001::0::1::::<><><>0<>0<><>::uid://c3hyf4nrm5pjf::::res://assets/sprites/Gretta sprite sheet 2.0.png
 RBG RPG Gretta.png::CompressedTexture2D::5509289602077949657::1791663485::1791663859::1::::<><><>0<>0<>cedb435b026d619c2945d270a1ada258<>res://.godot/imported/RBG RPG Gretta.png-aa414e3187116152ef589290efc35451.ctex::
 ::res://assets/tilesets/::1791662977
-::res://assets/tilesets/tilesets/::1791662977
-MainTileSet.tres::TileSet::2837491424262467690::1791663916::0::1::::<><><>0<>0<><>::uid://c2m5mi1tdivjj::::res://assets/ForgottenMemories/TileSet.png<>uid://dml25xasdry01::::res://assets/ForgottenMemories/Trees.png<>uid://crpv1rshhvpjt::::res://assets/ForgottenMemories/Trees_seperated.png<>uid://bj8asdo6a207o::::res://assets/ForgottenMemories/WaterTiles-6frames.png<>uid://c55ar8k4b7yy3::::res://assets/ForgottenMemories/Props.png
-::res://scenes/::1791663485
-fight_level.tscn::PackedScene::476338388883423658::1791663485::0::1::::<><><>0<>0<><>::uid://dw7il3smhwths::::res://assets/ForgottenMemories/Props.png<>uid://dlfup12i8s60o::::res://assets/ForgottenMemories/TileSet.png<>uid://c66wpohn280wa::::res://assets/ForgottenMemories/Trees_seperated.png
+::res://assets/tilesets/tilesets/::1791664001
+MainTileSet.tres::TileSet::2837491424262467690::1791664001::0::1::::<><><>0<>0<><>::uid://c2m5mi1tdivjj::::res://assets/ForgottenMemories/TileSet.png<>uid://dml25xasdry01::::res://assets/ForgottenMemories/Trees.png<>uid://crpv1rshhvpjt::::res://assets/ForgottenMemories/Trees_seperated.png<>uid://bj8asdo6a207o::::res://assets/ForgottenMemories/WaterTiles-6frames.png<>uid://c55ar8k4b7yy3::::res://assets/ForgottenMemories/Props.png
+::res://scenes/::1791664246
+fight_level.tscn::PackedScene::476338388883423658::1791664246::0::1::::<><><>0<>0<><>::uid://c55ar8k4b7yy3::::res://assets/ForgottenMemories/Props.png<>uid://c2m5mi1tdivjj::::res://assets/ForgottenMemories/TileSet.png<>uid://crpv1rshhvpjt::::res://assets/ForgottenMemories/Trees_seperated.png
 game.tscn::PackedScene::4478902882883297457::1791662968::0::1::::<><><>0<>0<><>::
-maze.tscn::PackedScene::4302971502984489538::1791663485::0::1::::<><><>0<>0<><>::uid://dlfup12i8s60o::::res://assets/ForgottenMemories/TileSet.png<>uid://c3dcuvfqw65sg::::res://assets/ForgottenMemories/WaterTiles-6frames.png
-puzzle1.tscn::PackedScene::1449287387357041574::1791663914::0::1::::<><><>0<>0<><>::uid://wr1deivfc0wv::::res://assets/mainCharacter.tscn<>uid://bgorcl8vwoei1::::res://assets/tilesets/tilesets/MainTileSet.tres
 mainCharacter.tscn::PackedScene::1580833204462141157::1791663485::0::1::::<><><>0<>0<><>::uid://bes5usw62i327::::res://scripts/main_character.gd<>uid://ckq0gvhs6p8sj::::res://assets/sprites/RBG RPG Gretta.png<>uid://cgxw6nq5sr5rj::::res://assets/sprites/gretta_sprite_frames.tres
+maze.tscn::PackedScene::4302971502984489538::1791664001::0::1::::<><><>0<>0<><>::uid://c2m5mi1tdivjj::::res://assets/ForgottenMemories/TileSet.png<>uid://bj8asdo6a207o::::res://assets/ForgottenMemories/WaterTiles-6frames.png<>uid://wr1deivfc0wv::::res://scenes/mainCharacter.tscn
+puzzle1.tscn::PackedScene::1449287387357041574::1791663916::0::1::::<><><>0<>0<><>::uid://wr1deivfc0wv::::res://scenes/mainCharacter.tscn<>uid://bgorcl8vwoei1::::res://assets/tilesets/tilesets/MainTileSet.tres
 titlescreen.tscn::PackedScene::1380611060262127310::1791662968::0::1::::<><><>0<>0<><>::uid://brfsn1sfhw4k7::::res://assets/fonts/new_theme.tres<>uid://dx500ndh5t8v2::::res://assets/shaders/title_menu_shaders.tres<>uid://cusjq3nbt6jop::::res://assets/backgrounds/Pine Hills/png/00_background.png<>uid://daqpvna7muwh::::res://scripts/save.gd<>uid://c75vocen6r2f8::::res://assets/backgrounds/Pine Hills/png/02_cloud1.png<>uid://chmvwnqqrtlr5::::res://assets/backgrounds/Pine Hills/png/03_cloud2.png<>uid://bkpvhbi2flfud::::res://assets/backgrounds/Pine Hills/png/06_back_mountains.png<>uid://bc3wtm6713ygt::::res://assets/backgrounds/Pine Hills/png/07_mid_hills.png<>uid://blei6avlfrt8t::::res://assets/backgrounds/Pine Hills/png/09_front_grass.png<>uid://cufvnssae47dk::::res://assets/backgrounds/Pine Hills/png/10_front_leafs.png<>uid://bugyg8pb3afru::::res://assets/backgrounds/Pine Hills/png/12_front_trees2.png<>uid://drchtmvu0bvj8::::res://assets/backgrounds/Pine Hills/png/11_front_trees1.png
 ::res://scripts/::1791662977
 main_character.gd::GDScript::2706193064330325110::1791662968::0::1::::<>CharacterBody2D<><>0<>0<><>::
