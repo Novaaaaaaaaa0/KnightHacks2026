@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed = 100
 @onready var gretta_sprite = $CollisionShape2D/AnimatedSprite2D
-var direction: String
+var direction: String = "none"
 
 func get_input():
 	var input_direction = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
@@ -22,11 +22,11 @@ func _process(_delta):
 		#moving down
 		if Input.is_action_pressed("moveDown"):
 			gretta_sprite.play("Front Walking")	
-			direction = "up"
+			direction = "down"
 		# moving up
 		if Input.is_action_pressed("moveUp"):
 			gretta_sprite.play("Back Walking")
-			direction = "down"
+			direction = "up"
 		# moving left
 		if Input.is_action_pressed("moveLeft"):
 			gretta_sprite.play("Left Walking")
@@ -38,11 +38,12 @@ func _process(_delta):
 	
 	else:
 		match direction:
-			"down":
-				gretta_sprite.play("Back Standing")
 			"up":
+				gretta_sprite.play("Back Standing")
+			"down":
 				gretta_sprite.play("Front Standing")
 			"left":
 				gretta_sprite.play("Left Standing")
 			"right":
 				gretta_sprite.play("Right Standing")
+		direction = "none"
