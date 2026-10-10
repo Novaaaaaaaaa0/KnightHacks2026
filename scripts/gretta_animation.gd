@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 @onready var gretta_sprite = $CollisionShape2D/AnimatedSprite2D
 
-func _process(_delta):
+func _input(event):
 	if Input.is_action_pressed("moveDown"):
 		gretta_sprite.play("Front Walking")
 	else:
