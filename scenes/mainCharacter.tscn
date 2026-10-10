@@ -20,9 +20,11 @@ position = Vector2(0.5, 0)
 texture = ExtResource("2_xhxfj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=1481908244]
-position = Vector2(0.5, 0)
+position = Vector2(1.5, 0)
 sprite_frames = ExtResource("3_1mvck")
 animation = &"Right Interact"
+frame = 2
+frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1234509425]
 position = Vector2(-2, 1)
