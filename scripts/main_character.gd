@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 100
+@export var speed: int = 100
 @onready var gretta_sprite = $CollisionShape2D/AnimatedSprite2D
 var direction: String = "none"
 
@@ -17,8 +17,15 @@ func _physics_process(_delta: float) -> void:
 func _process(_delta):
 	
 	var moving: bool = (Input.is_action_pressed("moveDown") || Input.is_action_just_pressed("moveUp") || Input.is_action_pressed("moveLeft") || Input.is_action_pressed("moveRight"))
+	
+	if (Input.is_action_pressed("Interaction")):
 
-	if moving:
+		if ((gretta_sprite.animation == ("Left Walking")) || (gretta_sprite.animation == ("Left Standing"))):
+				gretta_sprite.play("Left Interact")
+		elif ((gretta_sprite.animation == ("Right Walking")) || (gretta_sprite.animation == ("Right Standing"))):
+				gretta_sprite.play("Right Interact")
+	
+	elif moving:
 		#moving down
 		if Input.is_action_pressed("moveDown"):
 			gretta_sprite.play("Front Walking")	
