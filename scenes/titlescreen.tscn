@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://tw1pyuihjksk"]
+
+[ext_resource type="Theme" uid="uid://brfsn1sfhw4k7" path="res://assets/fonts/new_theme.tres" id="1_6d6rd"]
+[ext_resource type="Material" uid="uid://dx500ndh5t8v2" path="res://assets/shaders/title_menu_shaders.tres" id="1_8or72"]
+[ext_resource type="Texture2D" uid="uid://cusjq3nbt6jop" path="res://assets/backgrounds/Pine Hills/png/00_background.png" id="1_vhbaf"]
+[ext_resource type="Script" uid="uid://daqpvna7muwh" path="res://scripts/save.gd" id="2_3jj3l"]
+[ext_resource type="Texture2D" uid="uid://c75vocen6r2f8" path="res://assets/backgrounds/Pine Hills/png/02_cloud1.png" id="2_v6ms7"]
+[ext_resource type="Texture2D" uid="uid://chmvwnqqrtlr5" path="res://assets/backgrounds/Pine Hills/png/03_cloud2.png" id="3_rpvs4"]
+[ext_resource type="Texture2D" uid="uid://bkpvhbi2flfud" path="res://assets/backgrounds/Pine Hills/png/06_back_mountains.png" id="5_hcbn3"]
+[ext_resource type="Texture2D" uid="uid://bc3wtm6713ygt" path="res://assets/backgrounds/Pine Hills/png/07_mid_hills.png" id="6_ybki2"]
+[ext_resource type="Texture2D" uid="uid://blei6avlfrt8t" path="res://assets/backgrounds/Pine Hills/png/09_front_grass.png" id="7_lsij0"]
+[ext_resource type="Texture2D" uid="uid://cufvnssae47dk" path="res://assets/backgrounds/Pine Hills/png/10_front_leafs.png" id="8_y7yat"]
+[ext_resource type="Texture2D" uid="uid://bugyg8pb3afru" path="res://assets/backgrounds/Pine Hills/png/12_front_trees2.png" id="9_t3dwt"]
+[ext_resource type="Texture2D" uid="uid://drchtmvu0bvj8" path="res://assets/backgrounds/Pine Hills/png/11_front_trees1.png" id="10_anfsg"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o8hdv"]
+size = Vector2(450, 150)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_trt31"]
+
+[node name="Titlescreen" type="Node2D" unique_id=1356205235]
+
+[node name="Control" type="Control" parent="." unique_id=564016354]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Control" type="Control" parent="Control" unique_id=571521107]
+material = ExtResource("1_8or72")
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackgroundParallax" type="Parallax2D" parent="Control/Control" unique_id=796565213]
+use_parent_material = true
+repeat_size = Vector2(1920, 1080)
+autoscroll = Vector2(0.2, 1)
+follow_viewport = false
+
+[node name="Background" type="Sprite2D" parent="Control/Control/BackgroundParallax" unique_id=203568033]
+use_parent_material = true
+scale = Vector2(6, 6)
+texture = ExtResource("1_vhbaf")
+centered = false
+flip_h = true
+
+[node name="BackClouds" type="Sprite2D" parent="Control/Control/BackgroundParallax" unique_id=1327725535]
+modulate = Color(0.9490196, 0.9490196, 0.9490196, 0.16470589)
+use_parent_material = true
+scale = Vector2(6, 6)
+texture = ExtResource("2_v6ms7")
+centered = false
+flip_h = true
+
+[node name="BackCloud2" type="Sprite2D" parent="Control/Control/BackgroundParallax" unique_id=265306852]
+modulate = Color(0.9490196, 0.9490196, 0.9490196, 0.16470589)
+use_parent_material = true
+scale = Vector2(6, 6)
+texture = ExtResource("3_rpvs4")
+centered = false
+flip_h = true
+
+[node name="MountainsParallax" type="Parallax2D" parent="Control/Control" unique_id=1550566223]
+use_parent_material = true
+repeat_size = Vector2(1920, 1080)
+autoscroll = Vector2(0.5, 1)
+follow_viewport = false
+
+[node name="BackMountains" type="Sprite2D" parent="Control/Control/MountainsParallax" unique_id=497731745]
+use_parent_material = true
+scale = Vector2(6, 6)
+texture = ExtResource("5_hcbn3")
+centered = false
+flip_h = true
+
+[node name="MidHills" type="Sprite2D" parent="Control/Control/MountainsParallax" unique_id=76402329]
+use_parent_material = true
+scale = Vector2(6, 6)
+texture = ExtResource("6_ybki2")
+centered = false
+flip_h = true
+
+[node name="NatureParallax" type="Parallax2D" parent="Control/Control" unique_id=1195031968]
+use_parent_material = true
+repeat_size = Vector2(1920, 1080)
+autoscroll = Vector2(0.7, 1)
+follow_viewport = false
+
+[node name="FrontGrass" type="Sprite2D" parent="Control/Control/NatureParallax" unique_id=55271201]
+use_parent_material = true
+scale = Vector2(6, 6)
+texture = ExtResource("7_lsij0")
+centered = false
+flip_h = true
+
+[node name="FrontLeafs" type="Sprite2D" parent="Control/Control/NatureParallax" unique_id=1662975208]
+use_parent_material = true
+scale = Vector2(6, 6)
+texture = ExtResource("8_y7yat")
+centered = false
+flip_h = true
+
+[node name="FrontTrees1" type="Sprite2D" parent="Control/Control/NatureParallax" unique_id=1180244150]
+use_parent_material = true
+scale = Vector2(6, 6)
+texture = ExtResource("9_t3dwt")
+centered = false
+flip_h = true
+
+[node name="FrontTrees2" type="Sprite2D" parent="Control/Control/NatureParallax" unique_id=1780415691]
+use_parent_material = true
+scale = Vector2(6, 6)
+texture = ExtResource("10_anfsg")
+centered = false
+flip_h = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=844047261]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=1520747823]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer" unique_id=1497311627]
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 0
+theme = ExtResource("1_6d6rd")
+text = "RGB RPG"
+horizontal_alignment = 1
+
+[node name="Start" type="TextureButton" parent="Control/HBoxContainer/VBoxContainer" unique_id=1760175327]
+custom_minimum_size = Vector2(450, 150)
+custom_maximum_size = Vector2(450, 150)
+layout_mode = 2
+texture_normal = SubResource("PlaceholderTexture2D_o8hdv")
+
+[node name="Panel" type="Panel" parent="Control/HBoxContainer/VBoxContainer" unique_id=1981708914]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_trt31")
+
+[node name="Save" type="TextureButton" parent="Control/HBoxContainer/VBoxContainer" unique_id=61284690]
+custom_minimum_size = Vector2(450, 150)
+custom_maximum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 9
+size_flags_vertical = 4
+texture_normal = SubResource("PlaceholderTexture2D_o8hdv")
+script = ExtResource("2_3jj3l")
+
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/Save" to="Control/HBoxContainer/VBoxContainer/Save" method="_on_pressed"]

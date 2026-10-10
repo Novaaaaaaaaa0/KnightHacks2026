@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dx500ndh5t8v2"]
+
+[ext_resource type="Shader" uid="uid://b164lu2oanfna" path="res://assets/shaders/title_menu_shaders.gdshader" id="1_6offa"]
+
+[resource]
+shader = ExtResource("1_6offa")
+shader_parameter/weighted = true

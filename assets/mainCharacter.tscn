@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://wr1deivfc0wv"]
+
+[ext_resource type="Script" uid="uid://bes5usw62i327" path="res://scripts/main_character.gd" id="1_1iwj0"]
+[ext_resource type="Texture2D" uid="uid://bhkvlatrgf3uw" path="res://assets/Gretta Sprites/RBG RPG Gretta.png" id="2_xhxfj"]
+[ext_resource type="SpriteFrames" uid="uid://cgxw6nq5sr5rj" path="res://assets/Gretta Sprites/gretta_sprite_frames.tres" id="3_1mvck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trt31"]
+size = Vector2(13, 20)
+
+[node name="mainCharacter" type="CharacterBody2D" unique_id=215440872]
+script = ExtResource("1_1iwj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=705225977]
+position = Vector2(-2.5, 1)
+shape = SubResource("RectangleShape2D_trt31")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=470907157]
+visible = false
+position = Vector2(0.5, 0)
+texture = ExtResource("2_xhxfj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=1481908244]
+position = Vector2(0.5, 0)
+sprite_frames = ExtResource("3_1mvck")
+animation = &"Right Walking"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1234509425]
+position = Vector2(-2, 1)
+zoom = Vector2(3, 3)
+process_callback = 0
+limit_smoothed = true
+position_smoothing_enabled = true

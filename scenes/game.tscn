@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b42u411o5wcn6"]
+
+[node name="Game" type="Node2D" unique_id=730591720]
+scale = Vector2(1920, 1080)
