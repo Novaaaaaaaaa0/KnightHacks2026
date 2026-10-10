@@ -34,7 +34,7 @@ void fragment() {
 shader = SubResource("Shader_v44td")
 shader_parameter/threshold_r = 0.0890000042275
 shader_parameter/threshold_g = 0.118000005605
-shader_parameter/threshold_b = 0.10800000512999999
+shader_parameter/threshold_b = 0.10800000513
 shader_parameter/threshold = 0.0
 shader_parameter/spare_color = Color(0.19840994, 0.3597371, 0.194574, 1)
 shader_parameter/tolerance = 0.2850000135375

@@ -35,6 +35,6 @@ shader = SubResource("Shader_uqt1p")
 shader_parameter/threshold_r = 0.2090000099275
 shader_parameter/threshold_g = 1.0
 shader_parameter/threshold_b = 0.4230000200925
-shader_parameter/threshold = 1.7510000831724999
+shader_parameter/threshold = 1.7510000831725
 shader_parameter/spare_color = Color(0.62650627, 0.37125087, 0.4232491, 1)
 shader_parameter/tolerance = 0.7710000366225
