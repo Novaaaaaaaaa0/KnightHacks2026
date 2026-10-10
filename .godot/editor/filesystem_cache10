@@ -1,58 +1,58 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1791663342
-icon.svg::CompressedTexture2D::7073408813545462791::1791662523::1791663264::1::::<><><>0<>0<>a7346864cf2d01dc381382a70f046145<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile::-1::1791662575::0::1::::<><><>0<>0<><>::
-::res://addons/::1791663265
-plugin.cfg::TextFile::-1::1791662520::0::1::::<><><>0<>0<><>::
-plugin_logo.png::CompressedTexture2D::7688752142866580147::1791662520::1791663265::1::::<><><>0<>0<>9497b046d3646d59209ed12feff4ca8c<>res://.godot/imported/plugin_logo.png-d3e4b055d4f0f6f21ca044a6f3cd1517.ctex::
-plugin_save_system.gd::GDScript::478495610302073669::1791662520::0::1::::<>EditorPlugin<><>0<>1<><>::
-save_system.gd::GDScript::4520569248414924625::1791662520::0::1::::<>Node<><>0<>0<><>::
-updateSave.gd::GDScript::9214986645332703380::1791662520::0::1::::SaveGame<>Node<><>0<>0<><>::
-::res://assets/::1791663341
-gretta_animation.gd::GDScript::7460276915935916128::1791662692::0::1::::<>CharacterBody2D<><>0<>0<><>::
-mainCharacter.tscn::PackedScene::1580833204462141157::1791662676::0::1::::<><><>0<>0<><>::uid://bes5usw62i327::::res://scripts/main_character.gd<>uid://bhkvlatrgf3uw::::res://assets/Gretta Sprites/RBG RPG Gretta.png<>uid://cgxw6nq5sr5rj::::res://assets/Gretta Sprites/gretta_sprite_frames.tres
-::res://assets/backgrounds/::1791662535
-::res://assets/backgrounds/Pine Hills/::1791662535
-::res://assets/backgrounds/Pine Hills/png/::1791663264
-00_background.png::CompressedTexture2D::5947403023696275743::1791662523::1791663264::1::::<><><>0<>0<>0102034508badc9c739cfb788ec6e8fb<>res://.godot/imported/00_background.png-ba8df820c82bbc1d72fc64a1a73b3310.ctex::
-01_back clouds.png::CompressedTexture2D::649683743294946445::1791662523::1791663264::1::::<><><>0<>0<>bed25f4fdb8e43734d518866d023ddb4<>res://.godot/imported/01_back clouds.png-669bd8750570e129db4079e5393f1faf.ctex::
-02_cloud1.png::CompressedTexture2D::4093086019319932301::1791662523::1791663264::1::::<><><>0<>0<>a9d5ae9c1793d73597c798bed0366b51<>res://.godot/imported/02_cloud1.png-11dd739b18490803f39686fa73617e03.ctex::
-03_cloud2.png::CompressedTexture2D::7820720703993237997::1791662523::1791663264::1::::<><><>0<>0<>cea59ac1cd1ff4add3247b6e89fdc97b<>res://.godot/imported/03_cloud2.png-231f4e845745ad10bc619dd28014a76b.ctex::
-04_cloud3.png::CompressedTexture2D::4035269081554442503::1791662523::1791663264::1::::<><><>0<>0<>469250776813f768a6facb2d8828eda7<>res://.godot/imported/04_cloud3.png-e78ee58fd66112a7505a34040157efc5.ctex::
-05_cloud4.png::CompressedTexture2D::148551674432080761::1791662523::1791663264::1::::<><><>0<>0<>95d8442bdb9d0a3fd3fa765b8d79e470<>res://.godot/imported/05_cloud4.png-81cd3a65296ec6f75145e3de60ae8818.ctex::
-06_back_mountains.png::CompressedTexture2D::8185321427488296002::1791662523::1791663264::1::::<><><>0<>0<>0286c8ef48c4f32ca50d9060cd087876<>res://.godot/imported/06_back_mountains.png-757126324130fad08b1376b0c26c9a53.ctex::
-07_mid_hills.png::CompressedTexture2D::6365578281314836045::1791662523::1791663264::1::::<><><>0<>0<>5288fe89ec34bbb534dc3bec51fe8d3b<>res://.godot/imported/07_mid_hills.png-534b9d7c057868b673858de720f437c5.ctex::
-08_mid_forest.png::CompressedTexture2D::8426185208227565916::1791662523::1791663264::1::::<><><>0<>0<>8bf634e86e0c3863976a9cd6d8082729<>res://.godot/imported/08_mid_forest.png-90ece581cc0648e7f8e7adfd6e22a2d6.ctex::
-09_front_grass.png::CompressedTexture2D::6009850345945756134::1791662523::1791663264::1::::<><><>0<>0<>4cd7e896ce08f72096eef8196068be1c<>res://.godot/imported/09_front_grass.png-9002300960ef1a90ae9cbf400e667434.ctex::
-10_front_leafs.png::CompressedTexture2D::7870307833608441210::1791662523::1791663264::1::::<><><>0<>0<>b79dff615fc6c34b221664cefc6f6cdb<>res://.godot/imported/10_front_leafs.png-79de1ce61600c584f653e60e14c78697.ctex::
-11_front_trees1.png::CompressedTexture2D::4754216493829946856::1791662523::1791663264::1::::<><><>0<>0<>8177ffe8e6886469d9372c74ef71f4f2<>res://.godot/imported/11_front_trees1.png-35f36c91a637a72d0fa57347f91bd6d8.ctex::
-12_front_trees2.png::CompressedTexture2D::8753785362234417073::1791662523::1791663264::1::::<><><>0<>0<>667e449bb005995fdc69e43875d0bc5f<>res://.godot/imported/12_front_trees2.png-0eee971604b437aad5a3884610a03c8d.ctex::
-13_front_rocks.png::CompressedTexture2D::1238445867095781793::1791662523::1791663264::1::::<><><>0<>0<>306e4320c5fec6188e787cf5c3014dda<>res://.godot/imported/13_front_rocks.png-906a9d0e2ffd3f92104a18484aaa94ce.ctex::
-::res://assets/fonts/::1791662535
-new_theme.tres::Theme::3591070429151523752::1791662782::0::1::::<><><>0<>0<><>::
-::res://assets/ForgottenMemories/::1791663265
-Props.png::CompressedTexture2D::6940470117684199004::1791662523::1791663265::1::::<><><>0<>0<>c42c3f7c76e8c07e1d56e7d0fbf263d7<>res://.godot/imported/Props.png-1407b3c183d112320a3f2500b07fddf1.ctex::
-TileSet.png::CompressedTexture2D::6694556079190983519::1791662523::1791663265::1::::<><><>0<>0<>2d847f4a213d3dfddb3f3bd87ebaa993<>res://.godot/imported/TileSet.png-93910b5de38a53f8e83f83dac3cceac4.ctex::
-Trees.png::CompressedTexture2D::8025930471511787460::1791662523::1791663265::1::::<><><>0<>0<>0f80bbec4bd2f7e6dd36e02963a7dbc1<>res://.godot/imported/Trees.png-01474df1dc1c73396613e256cabf2d13.ctex::
-Trees_seperated.png::CompressedTexture2D::5998339784064949625::1791662523::1791663264::1::::<><><>0<>0<>fdfe50430cb655342f578798c9a84b96<>res://.godot/imported/Trees_seperated.png-f5fc30f8d2e453adb047f479a9fc4153.ctex::
-WaterTiles-6frames.png::CompressedTexture2D::3086277067216554858::1791662523::1791663265::1::::<><><>0<>0<>5f07ac05a35a1721ebf4e17159dbcd3a<>res://.godot/imported/WaterTiles-6frames.png-381a4571a65088b220e4eec4fcc981d2.ctex::
-::res://assets/shaders/::1791662535
-::res://assets/shaders/shaders/::1791662535
-title_menu_shaders.gdshader::Shader::4277107857994312630::1791662523::0::1::::<><><>0<>0<><>::
-title_menu_shaders.tres::ShaderMaterial::8837100044839514113::1791662523::0::1::::<><><>0<>0<><>::uid://b164lu2oanfna::::res://assets/shaders/title_menu_shaders.gdshader
-::res://assets/sprites/::1791663343
-Gretta sprite sheet 2.0.png::CompressedTexture2D::6754047314374693507::1791662748::1791663264::1::::<><><>0<>0<>a884e49f04eb7a2d780c515749f60034<>res://.godot/imported/Gretta sprite sheet 2.0.png-55c7932d3681a08dc677f193e9290106.ctex::
-gretta_sprite_frames.tres::SpriteFrames::5242846959917927979::1791663321::0::1::::<><><>0<>0<><>::
-RBG RPG Gretta.png::CompressedTexture2D::5509289602077949657::1791663343::1791663346::1::::<><><>0<>0<>cedb435b026d619c2945d270a1ada258<>res://.godot/imported/RBG RPG Gretta.png-aa414e3187116152ef589290efc35451.ctex::
-::res://assets/tilesets/::1791662761
-::res://assets/tilesets/tilesets/::1791662761
-MainTileSet.tres::TileSet::2837491424262467690::1791662739::0::1::::<><><>0<>0<><>::uid://dlfup12i8s60o::::res://assets/ForgottenMemories/TileSet.png<>uid://ckbng0qo4tijc::::res://assets/ForgottenMemories/Trees.png<>uid://c66wpohn280wa::::res://assets/ForgottenMemories/Trees_seperated.png<>uid://c3dcuvfqw65sg::::res://assets/ForgottenMemories/WaterTiles-6frames.png<>uid://dw7il3smhwths::::res://assets/ForgottenMemories/Props.png
-::res://scenes/::1791663265
-fight_level.tscn::PackedScene::476338388883423658::1791663239::0::1::::<><><>0<>0<><>::uid://dw7il3smhwths::::res://assets/ForgottenMemories/Props.png<>uid://dlfup12i8s60o::::res://assets/ForgottenMemories/TileSet.png<>uid://c66wpohn280wa::::res://assets/ForgottenMemories/Trees_seperated.png
-game.tscn::PackedScene::4478902882883297457::1791662541::0::1::::<><><>0<>0<><>::
-maze.tscn::PackedScene::4302971502984489538::1791663243::0::1::::<><><>0<>0<><>::uid://dlfup12i8s60o::::res://assets/ForgottenMemories/TileSet.png<>uid://c3dcuvfqw65sg::::res://assets/ForgottenMemories/WaterTiles-6frames.png
-puzzle1.tscn::PackedScene::1449287387357041574::1791662651::0::1::::<><><>0<>0<><>::uid://wr1deivfc0wv::::res://assets/mainCharacter.tscn<>uid://bgorcl8vwoei1::::res://assets/tilesets/MainTileSet.tres
-titlescreen.tscn::PackedScene::1380611060262127310::1791662667::0::1::::<><><>0<>0<><>::uid://brfsn1sfhw4k7::::res://assets/fonts/new_theme.tres<>uid://dx500ndh5t8v2::::res://assets/shaders/title_menu_shaders.tres<>uid://cusjq3nbt6jop::::res://assets/backgrounds/Pine Hills/png/00_background.png<>uid://daqpvna7muwh::::res://scripts/save.gd<>uid://c75vocen6r2f8::::res://assets/backgrounds/Pine Hills/png/02_cloud1.png<>uid://chmvwnqqrtlr5::::res://assets/backgrounds/Pine Hills/png/03_cloud2.png<>uid://bkpvhbi2flfud::::res://assets/backgrounds/Pine Hills/png/06_back_mountains.png<>uid://bc3wtm6713ygt::::res://assets/backgrounds/Pine Hills/png/07_mid_hills.png<>uid://blei6avlfrt8t::::res://assets/backgrounds/Pine Hills/png/09_front_grass.png<>uid://cufvnssae47dk::::res://assets/backgrounds/Pine Hills/png/10_front_leafs.png<>uid://bugyg8pb3afru::::res://assets/backgrounds/Pine Hills/png/12_front_trees2.png<>uid://drchtmvu0bvj8::::res://assets/backgrounds/Pine Hills/png/11_front_trees1.png
-::res://scripts/::1791662663
-main_character.gd::GDScript::2706193064330325110::1791662631::0::1::::<>CharacterBody2D<><>0<>0<><>::
-save.gd::GDScript::211565912823002723::1791662543::0::1::::<>TextureButton<><>0<>0<><>::
+::res://::1791663511
+icon.svg::CompressedTexture2D::7073408813545462791::1791663505::1791663505::1::::<><><>0<>0<>a7346864cf2d01dc381382a70f046145<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1791663505::0::1::::<><><>0<>0<><>::
+::res://addons/::1791663505
+plugin.cfg::TextFile::-1::1791663505::0::1::::<><><>0<>0<><>::
+plugin_logo.png::CompressedTexture2D::7688752142866580147::1791663505::1791663505::1::::<><><>0<>0<>9497b046d3646d59209ed12feff4ca8c<>res://.godot/imported/plugin_logo.png-d3e4b055d4f0f6f21ca044a6f3cd1517.ctex::
+plugin_save_system.gd::GDScript::478495610302073669::1791663505::0::1::::<>EditorPlugin<><>0<>1<><>::
+save_system.gd::GDScript::4520569248414924625::1791663505::0::1::::<>Node<><>0<>0<><>::
+updateSave.gd::GDScript::9214986645332703380::1791663505::0::1::::SaveGame<>Node<><>0<>0<><>::
+::res://assets/::1791663505
+gretta_animation.gd::GDScript::7460276915935916128::1791663505::0::1::::<>CharacterBody2D<><>0<>0<><>::
+mainCharacter.tscn::PackedScene::1580833204462141157::1791663505::0::1::::<><><>0<>0<><>::uid://bes5usw62i327::::res://scripts/main_character.gd<>uid://ckq0gvhs6p8sj::::res://assets/sprites/RBG RPG Gretta.png<>uid://cgxw6nq5sr5rj::::res://assets/sprites/gretta_sprite_frames.tres
+::res://assets/backgrounds/::1791663505
+::res://assets/backgrounds/Pine Hills/::1791663505
+::res://assets/backgrounds/Pine Hills/png/::1791663505
+00_background.png::CompressedTexture2D::5947403023696275743::1791663505::1791663505::1::::<><><>0<>0<>0102034508badc9c739cfb788ec6e8fb<>res://.godot/imported/00_background.png-ba8df820c82bbc1d72fc64a1a73b3310.ctex::
+01_back clouds.png::CompressedTexture2D::649683743294946445::1791663505::1791663505::1::::<><><>0<>0<>bed25f4fdb8e43734d518866d023ddb4<>res://.godot/imported/01_back clouds.png-669bd8750570e129db4079e5393f1faf.ctex::
+02_cloud1.png::CompressedTexture2D::4093086019319932301::1791663505::1791663505::1::::<><><>0<>0<>a9d5ae9c1793d73597c798bed0366b51<>res://.godot/imported/02_cloud1.png-11dd739b18490803f39686fa73617e03.ctex::
+03_cloud2.png::CompressedTexture2D::7820720703993237997::1791663505::1791663505::1::::<><><>0<>0<>cea59ac1cd1ff4add3247b6e89fdc97b<>res://.godot/imported/03_cloud2.png-231f4e845745ad10bc619dd28014a76b.ctex::
+04_cloud3.png::CompressedTexture2D::4035269081554442503::1791663505::1791663505::1::::<><><>0<>0<>469250776813f768a6facb2d8828eda7<>res://.godot/imported/04_cloud3.png-e78ee58fd66112a7505a34040157efc5.ctex::
+05_cloud4.png::CompressedTexture2D::148551674432080761::1791663505::1791663505::1::::<><><>0<>0<>95d8442bdb9d0a3fd3fa765b8d79e470<>res://.godot/imported/05_cloud4.png-81cd3a65296ec6f75145e3de60ae8818.ctex::
+06_back_mountains.png::CompressedTexture2D::8185321427488296002::1791663505::1791663505::1::::<><><>0<>0<>0286c8ef48c4f32ca50d9060cd087876<>res://.godot/imported/06_back_mountains.png-757126324130fad08b1376b0c26c9a53.ctex::
+07_mid_hills.png::CompressedTexture2D::6365578281314836045::1791663505::1791663505::1::::<><><>0<>0<>5288fe89ec34bbb534dc3bec51fe8d3b<>res://.godot/imported/07_mid_hills.png-534b9d7c057868b673858de720f437c5.ctex::
+08_mid_forest.png::CompressedTexture2D::8426185208227565916::1791663505::1791663505::1::::<><><>0<>0<>8bf634e86e0c3863976a9cd6d8082729<>res://.godot/imported/08_mid_forest.png-90ece581cc0648e7f8e7adfd6e22a2d6.ctex::
+09_front_grass.png::CompressedTexture2D::6009850345945756134::1791663505::1791663505::1::::<><><>0<>0<>4cd7e896ce08f72096eef8196068be1c<>res://.godot/imported/09_front_grass.png-9002300960ef1a90ae9cbf400e667434.ctex::
+10_front_leafs.png::CompressedTexture2D::7870307833608441210::1791663505::1791663505::1::::<><><>0<>0<>b79dff615fc6c34b221664cefc6f6cdb<>res://.godot/imported/10_front_leafs.png-79de1ce61600c584f653e60e14c78697.ctex::
+11_front_trees1.png::CompressedTexture2D::4754216493829946856::1791663505::1791663505::1::::<><><>0<>0<>8177ffe8e6886469d9372c74ef71f4f2<>res://.godot/imported/11_front_trees1.png-35f36c91a637a72d0fa57347f91bd6d8.ctex::
+12_front_trees2.png::CompressedTexture2D::8753785362234417073::1791663505::1791663505::1::::<><><>0<>0<>667e449bb005995fdc69e43875d0bc5f<>res://.godot/imported/12_front_trees2.png-0eee971604b437aad5a3884610a03c8d.ctex::
+13_front_rocks.png::CompressedTexture2D::1238445867095781793::1791663505::1791663505::1::::<><><>0<>0<>306e4320c5fec6188e787cf5c3014dda<>res://.godot/imported/13_front_rocks.png-906a9d0e2ffd3f92104a18484aaa94ce.ctex::
+::res://assets/fonts/::1791663505
+new_theme.tres::Theme::3591070429151523752::1791663505::0::1::::<><><>0<>0<><>::
+::res://assets/ForgottenMemories/::1791663505
+Props.png::CompressedTexture2D::6940470117684199004::1791663505::1791663505::1::::<><><>0<>0<>c42c3f7c76e8c07e1d56e7d0fbf263d7<>res://.godot/imported/Props.png-1407b3c183d112320a3f2500b07fddf1.ctex::
+TileSet.png::CompressedTexture2D::6694556079190983519::1791663505::1791663505::1::::<><><>0<>0<>2d847f4a213d3dfddb3f3bd87ebaa993<>res://.godot/imported/TileSet.png-93910b5de38a53f8e83f83dac3cceac4.ctex::
+Trees.png::CompressedTexture2D::8025930471511787460::1791663505::1791663505::1::::<><><>0<>0<>0f80bbec4bd2f7e6dd36e02963a7dbc1<>res://.godot/imported/Trees.png-01474df1dc1c73396613e256cabf2d13.ctex::
+Trees_seperated.png::CompressedTexture2D::5998339784064949625::1791663505::1791663505::1::::<><><>0<>0<>fdfe50430cb655342f578798c9a84b96<>res://.godot/imported/Trees_seperated.png-f5fc30f8d2e453adb047f479a9fc4153.ctex::
+WaterTiles-6frames.png::CompressedTexture2D::3086277067216554858::1791663505::1791663505::1::::<><><>0<>0<>5f07ac05a35a1721ebf4e17159dbcd3a<>res://.godot/imported/WaterTiles-6frames.png-381a4571a65088b220e4eec4fcc981d2.ctex::
+::res://assets/shaders/::1791663505
+::res://assets/shaders/shaders/::1791663505
+title_menu_shaders.gdshader::Shader::4277107857994312630::1791663505::0::1::::<><><>0<>0<><>::
+title_menu_shaders.tres::ShaderMaterial::8837100044839514113::1791663505::0::1::::<><><>0<>0<><>::uid://b164lu2oanfna::::res://assets/shaders/title_menu_shaders.gdshader
+::res://assets/sprites/::1791663505
+Gretta sprite sheet 2.0.png::CompressedTexture2D::6754047314374693507::1791663505::1791663505::1::::<><><>0<>0<>a884e49f04eb7a2d780c515749f60034<>res://.godot/imported/Gretta sprite sheet 2.0.png-55c7932d3681a08dc677f193e9290106.ctex::
+gretta_sprite_frames.tres::SpriteFrames::5242846959917927979::1791663505::0::1::::<><><>0<>0<><>::uid://c3hyf4nrm5pjf::::res://assets/sprites/Gretta sprite sheet 2.0.png
+RBG RPG Gretta.png::CompressedTexture2D::5509289602077949657::1791663505::1791663505::1::::<><><>0<>0<>cedb435b026d619c2945d270a1ada258<>res://.godot/imported/RBG RPG Gretta.png-aa414e3187116152ef589290efc35451.ctex::
+::res://assets/tilesets/::1791663505
+::res://assets/tilesets/tilesets/::1791663505
+MainTileSet.tres::TileSet::2837491424262467690::1791663505::0::1::::<><><>0<>0<><>::uid://dlfup12i8s60o::::res://assets/ForgottenMemories/TileSet.png<>uid://ckbng0qo4tijc::::res://assets/ForgottenMemories/Trees.png<>uid://c66wpohn280wa::::res://assets/ForgottenMemories/Trees_seperated.png<>uid://c3dcuvfqw65sg::::res://assets/ForgottenMemories/WaterTiles-6frames.png<>uid://dw7il3smhwths::::res://assets/ForgottenMemories/Props.png
+::res://scenes/::1791663505
+fight_level.tscn::PackedScene::476338388883423658::1791663505::0::1::::<><><>0<>0<><>::uid://dw7il3smhwths::::res://assets/ForgottenMemories/Props.png<>uid://dlfup12i8s60o::::res://assets/ForgottenMemories/TileSet.png<>uid://c66wpohn280wa::::res://assets/ForgottenMemories/Trees_seperated.png
+game.tscn::PackedScene::4478902882883297457::1791663505::0::1::::<><><>0<>0<><>::
+maze.tscn::PackedScene::4302971502984489538::1791663505::0::1::::<><><>0<>0<><>::uid://dlfup12i8s60o::::res://assets/ForgottenMemories/TileSet.png<>uid://c3dcuvfqw65sg::::res://assets/ForgottenMemories/WaterTiles-6frames.png
+puzzle1.tscn::PackedScene::1449287387357041574::1791663505::0::1::::<><><>0<>0<><>::uid://wr1deivfc0wv::::res://assets/mainCharacter.tscn<>uid://bgorcl8vwoei1::::res://assets/tilesets/MainTileSet.tres
+titlescreen.tscn::PackedScene::1380611060262127310::1791663505::0::1::::<><><>0<>0<><>::uid://brfsn1sfhw4k7::::res://assets/fonts/new_theme.tres<>uid://dx500ndh5t8v2::::res://assets/shaders/title_menu_shaders.tres<>uid://cusjq3nbt6jop::::res://assets/backgrounds/Pine Hills/png/00_background.png<>uid://daqpvna7muwh::::res://scripts/save.gd<>uid://c75vocen6r2f8::::res://assets/backgrounds/Pine Hills/png/02_cloud1.png<>uid://chmvwnqqrtlr5::::res://assets/backgrounds/Pine Hills/png/03_cloud2.png<>uid://bkpvhbi2flfud::::res://assets/backgrounds/Pine Hills/png/06_back_mountains.png<>uid://bc3wtm6713ygt::::res://assets/backgrounds/Pine Hills/png/07_mid_hills.png<>uid://blei6avlfrt8t::::res://assets/backgrounds/Pine Hills/png/09_front_grass.png<>uid://cufvnssae47dk::::res://assets/backgrounds/Pine Hills/png/10_front_leafs.png<>uid://bugyg8pb3afru::::res://assets/backgrounds/Pine Hills/png/12_front_trees2.png<>uid://drchtmvu0bvj8::::res://assets/backgrounds/Pine Hills/png/11_front_trees1.png
+::res://scripts/::1791663505
+main_character.gd::GDScript::2706193064330325110::1791663505::0::1::::<>CharacterBody2D<><>0<>0<><>::
+save.gd::GDScript::211565912823002723::1791663505::0::1::::<>TextureButton<><>0<>0<><>::
