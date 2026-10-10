@@ -1,9 +1,11 @@
 [gd_scene format=4 uid="uid://uwbs0tgmiuru"]
 
+[ext_resource type="Script" uid="uid://b3832x7x45saj" path="res://scenes/tutorial.gd" id="1_ccke3"]
 [ext_resource type="PackedScene" uid="uid://wr1deivfc0wv" path="res://scenes/mainCharacter.tscn" id="1_g7eoe"]
 [ext_resource type="TileSet" uid="uid://bgorcl8vwoei1" path="res://assets/tilesets/tilesets/MainTileSet.tres" id="2_ccke3"]
 
 [node name="Puzzles" type="Node2D" unique_id=378654457]
+script = ExtResource("1_ccke3")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=144632448]
 position = Vector2(4, 306)
@@ -23,3 +25,16 @@ tile_map_data = PackedByteArray("AAAAAPf/AQAZACkAAAAAAPj/AQAZACoAAAABAPf/AQAaACk
 tile_set = ExtResource("2_ccke3")
 
 [node name="mainCharacter" parent="." unique_id=1622110444 instance=ExtResource("1_g7eoe")]
+speed = 100
+
+[node name="leftLimit" type="Marker2D" parent="." unique_id=2002711896]
+position = Vector2(-983, 32)
+
+[node name="bottomLimit" type="Marker2D" parent="." unique_id=976796852]
+position = Vector2(-796, 1000)
+
+[node name="rightLimit" type="Marker2D" parent="." unique_id=285799493]
+position = Vector2(1025, 581)
+
+[node name="topLimit" type="Marker2D" parent="." unique_id=595224686]
+position = Vector2(452, -1018)
