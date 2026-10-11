@@ -6598,6 +6598,12 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7o6h6")
 sources/1 = SubResource("TileSetAtlasSource_flanb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ckn67"]
+size = Vector2(20, 1012)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4y2lm"]
+size = Vector2(1031, 20)
+
 [node name="fightLevel" type="Node2D" unique_id=427986451]
 position = Vector2(2, 0)
 script = ExtResource("1_of54k")
@@ -6608,7 +6614,6 @@ tile_map_data = PackedByteArray("AADh/97/AQBqACQAAADh/9//AQBqACUAAADh/+D/AQBqACY
 tile_set = SubResource("TileSet_0cesb")
 
 [node name="mainCharacter" parent="." unique_id=215440872 instance=ExtResource("3_vqef2")]
-speed = 100
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1814712340]
 position = Vector2(49, -24)
@@ -6626,3 +6631,21 @@ position = Vector2(527, -344)
 
 [node name="bottomLimit" type="Marker2D" parent="." unique_id=838416913]
 position = Vector2(295, 470)
+
+[node name="invisible boundaries" type="StaticBody2D" parent="." unique_id=1106336958]
+
+[node name="leftBorder" type="CollisionShape2D" parent="invisible boundaries" unique_id=1444424673]
+position = Vector2(-489, -30)
+shape = SubResource("RectangleShape2D_ckn67")
+
+[node name="rightBorder" type="CollisionShape2D" parent="invisible boundaries" unique_id=536283473]
+position = Vector2(529, -29)
+shape = SubResource("RectangleShape2D_ckn67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="invisible boundaries" unique_id=321522823]
+position = Vector2(21, 468)
+shape = SubResource("RectangleShape2D_4y2lm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="invisible boundaries" unique_id=702747630]
+position = Vector2(17, -524)
+shape = SubResource("RectangleShape2D_4y2lm")
