@@ -38,6 +38,10 @@ region = Rect2(32, 128, 32, 32)
 atlas = ExtResource("1_fm13a")
 region = Rect2(0, 128, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6k3l"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(0, 64, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_nnttq"]
 atlas = ExtResource("1_fm13a")
 region = Rect2(0, 64, 32, 32)
@@ -61,6 +65,10 @@ region = Rect2(32, 160, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_enfd8"]
 atlas = ExtResource("1_fm13a")
 region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfr2n"]
+atlas = ExtResource("1_fm13a")
+region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_adw0g"]
 atlas = ExtResource("1_fm13a")
@@ -123,6 +131,9 @@ animations = [{
 }, {
 "duration": 2.0,
 "texture": SubResource("AtlasTexture_wgn4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6k3l")
 }],
 "loop": 0,
 "name": &"Left Interact",
@@ -156,6 +167,9 @@ animations = [{
 }, {
 "duration": 2.0,
 "texture": SubResource("AtlasTexture_enfd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfr2n")
 }],
 "loop": 0,
 "name": &"Right Interact",

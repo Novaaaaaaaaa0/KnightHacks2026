@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://bov0rrexh08f1"]
+
+[ext_resource type="Texture2D" uid="uid://b7kp7dnf163we" path="res://assets/sprites/Red flower.png" id="1_vttqt"]
+[ext_resource type="Texture2D" uid="uid://bmryrk8lv5u71" path="res://assets/sprites/Blue flower.png" id="2_4kdbh"]
+[ext_resource type="Texture2D" uid="uid://1k48qodc80nm" path="res://assets/sprites/Green Flower.png" id="3_4kdbh"]
+
+[sub_resource type="Theme" id="Theme_4y2lm"]
+default_font_size = 150
+
+[sub_resource type="Theme" id="Theme_ckn67"]
+default_font_size = 100
+
+[node name="levelSelect" type="Node2D" unique_id=290629519]
+
+[node name="Control" type="Control" parent="." unique_id=344473850]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="Control" parent="Control" unique_id=922132721]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/Background" unique_id=1593820026]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1076.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control/Background" unique_id=652433035]
+layout_mode = 0
+offset_top = -8.0
+offset_right = 1920.0
+offset_bottom = 98.0
+color = Color(0, 1, 0, 0.8392157)
+
+[node name="ColorRect5" type="ColorRect" parent="Control/Background" unique_id=398682558]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 970.0
+offset_right = 1914.0
+offset_bottom = 1076.0
+color = Color(0, 1, 0, 0.8392157)
+
+[node name="ColorRect3" type="ColorRect" parent="Control/Background" unique_id=1510498727]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 2.0
+offset_right = 107.0
+offset_bottom = 1079.0
+color = Color(1, 0, 0, 0.8392157)
+
+[node name="ColorRect4" type="ColorRect" parent="Control/Background" unique_id=2083707911]
+layout_mode = 0
+offset_left = 1811.0
+offset_top = -4.0
+offset_right = 1921.0
+offset_bottom = 1085.0
+color = Color(0, 0, 1, 0.8392157)
+
+[node name="TextureRect" type="TextureRect" parent="Control/Background" unique_id=2000853358]
+layout_mode = 0
+offset_left = 968.0
+offset_top = 355.0
+offset_right = 1246.0
+offset_bottom = 651.0
+texture = ExtResource("1_vttqt")
+expand_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Control/Background" unique_id=1646451129]
+layout_mode = 0
+offset_left = 1355.0
+offset_top = 357.0
+offset_right = 1678.0
+offset_bottom = 680.0
+texture = ExtResource("2_4kdbh")
+expand_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Control/Background" unique_id=1096292051]
+layout_mode = 0
+offset_left = 1130.0
+offset_top = 137.0
+offset_right = 1494.0
+offset_bottom = 516.0
+texture = ExtResource("3_4kdbh")
+expand_mode = 5
+
+[node name="Labels" type="Control" parent="Control" unique_id=1634772695]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control/Labels" unique_id=1511279410]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 0
+offset_left = 168.0
+offset_top = 95.0
+offset_right = 1014.0
+offset_bottom = 345.0
+theme = SubResource("Theme_4y2lm")
+text = "Level Select"
+horizontal_alignment = 1
+
+[node name="Buttons" type="Control" parent="Control" unique_id=1480504188]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_ckn67")
+
+[node name="Level1" type="Button" parent="Control/Buttons" unique_id=114938958]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 343.0
+offset_right = 811.0
+offset_bottom = 489.0
+text = "Level 1"
+
+[node name="Level2" type="Button" parent="Control/Buttons" unique_id=1171180411]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 533.0
+offset_right = 813.0
+offset_bottom = 679.0
+text = "Level 2"
+
+[node name="Level3" type="Button" parent="Control/Buttons" unique_id=1584876558]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 724.0
+offset_right = 810.0
+offset_bottom = 870.0
+text = "Level 3"
+
+[node name="Back" type="Button" parent="Control/Buttons" unique_id=1828133384]
+layout_mode = 0
+offset_left = 1135.0
+offset_top = 723.0
+offset_right = 1477.0
+offset_bottom = 868.0
+text = "Back"

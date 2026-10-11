@@ -1,20 +1,11 @@
 [gd_scene format=4 uid="uid://uwbs0tgmiuru"]
 
-[ext_resource type="Script" uid="uid://b3832x7x45saj" path="res://scenes/tutorial.gd" id="1_ccke3"]
-[ext_resource type="Shader" uid="uid://dcsepcyddr1uq" path="res://assets/shaders/shaders/colorRemoverShader.gdshader" id="1_d7vh0"]
 [ext_resource type="PackedScene" uid="uid://wr1deivfc0wv" path="res://scenes/mainCharacter.tscn" id="1_g7eoe"]
+[ext_resource type="Material" uid="uid://cy3kc4pmgellq" path="res://assets/shaders/level_Shaders.tres" id="1_voev6"]
 [ext_resource type="TileSet" uid="uid://bgorcl8vwoei1" path="res://assets/tilesets/tilesets/MainTileSet.tres" id="2_ccke3"]
 [ext_resource type="Texture2D" uid="uid://b7kp7dnf163we" path="res://assets/sprites/Red flower.png" id="2_sye7v"]
 [ext_resource type="Script" uid="uid://lnjyf7aq7l6" path="res://scripts/color_manager.gd" id="2_voev6"]
 [ext_resource type="Script" uid="uid://qoc5sj7relaw" path="res://scripts/interactive_area_detection.gd" id="4_sye7v"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mjqgh"]
-shader = ExtResource("1_d7vh0")
-shader_parameter/threshold = 0.0
-shader_parameter/make_transparent = false
-shader_parameter/collectedRed = false
-shader_parameter/collectedBlue = false
-shader_parameter/collectedGreen = false
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2oobf"]
 size = Vector2(10.999996, 18)
@@ -23,8 +14,7 @@ size = Vector2(10.999996, 18)
 radius = 26.172504
 
 [node name="Puzzles" type="Node2D" unique_id=378654457]
-script = ExtResource("1_ccke3")
-material = SubResource("ShaderMaterial_mjqgh")
+material = ExtResource("1_voev6")
 script = ExtResource("2_voev6")
 
 [node name="FG_Grass" type="TileMapLayer" parent="." unique_id=144632448]
@@ -59,8 +49,8 @@ position = Vector2(-796, 1000)
 position = Vector2(1025, 581)
 
 [node name="topLimit" type="Marker2D" parent="." unique_id=595224686]
-position = Vector2(452, -1018)
 use_parent_material = true
+position = Vector2(452, -1018)
 
 [node name="FlowerRed" type="Sprite2D" parent="." unique_id=1659478196]
 use_parent_material = true

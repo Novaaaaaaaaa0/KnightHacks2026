@@ -26,7 +26,7 @@ void fragment() {
 		if (is_red)
 			COLOR = vec4(COLOR.r, (COLOR.g + COLOR.b)/2.0, (COLOR.g + COLOR.b)/2.0, COLOR.a); 
 		else 
-			COLOR = vec4((COLOR.r/5.5), 0.0, 0.0, COLOR.a);
+			COLOR = vec4((COLOR.r/3.5), 0.0, 0.0, COLOR.a);
     } else {
         if (make_transparent) {
             COLOR = vec4(0.0, 0.0, 0.0, 0.0);
