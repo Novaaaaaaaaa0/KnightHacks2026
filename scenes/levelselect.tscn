@@ -95,9 +95,9 @@ offset_bottom = 40.0
 modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(200, 250)
 layout_mode = 0
-offset_left = 147.0
+offset_left = 168.0
 offset_top = 95.0
-offset_right = 993.0
+offset_right = 1014.0
 offset_bottom = 345.0
 theme = SubResource("Theme_4y2lm")
 text = "Level Select"
@@ -110,21 +110,21 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = SubResource("Theme_ckn67")
 
-[node name="Level1" type="Button" parent="Control/Buttons" unique_id=1171180411]
-layout_mode = 0
-offset_left = 182.0
-offset_top = 533.0
-offset_right = 813.0
-offset_bottom = 679.0
-text = "Level 2"
-
-[node name="Level2" type="Button" parent="Control/Buttons" unique_id=114938958]
+[node name="Level1" type="Button" parent="Control/Buttons" unique_id=114938958]
 layout_mode = 0
 offset_left = 180.0
 offset_top = 343.0
 offset_right = 811.0
 offset_bottom = 489.0
 text = "Level 1"
+
+[node name="Level2" type="Button" parent="Control/Buttons" unique_id=1171180411]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 533.0
+offset_right = 813.0
+offset_bottom = 679.0
+text = "Level 2"
 
 [node name="Level3" type="Button" parent="Control/Buttons" unique_id=1584876558]
 layout_mode = 0
@@ -134,7 +134,7 @@ offset_right = 810.0
 offset_bottom = 870.0
 text = "Level 3"
 
-[node name="Level4" type="Button" parent="Control/Buttons" unique_id=1828133384]
+[node name="Back" type="Button" parent="Control/Buttons" unique_id=1828133384]
 layout_mode = 0
 offset_left = 1135.0
 offset_top = 723.0
