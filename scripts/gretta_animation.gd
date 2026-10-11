@@ -1,24 +1,33 @@
 extends CharacterBody2D
-# tried to do a seperate script,
-# but lowkey not figuring that out rn so this is pasted in the other script 
 
-@onready var gretta_sprite = $CollisionShape2D/AnimatedSprite2D
+@export var speed: float = 150.0
 
-func _input(event):
-	if Input.is_action_pressed("moveDown"):
-		gretta_sprite.play("Front Walking")
-	else:
-		gretta_sprite.stop()
-	if Input.is_action_pressed("moveUp"):
-		gretta_sprite.play("Back Walking")
-	else:
-		gretta_sprite.stop()
-	if Input.is_action_pressed("moveLeft"):
-		gretta_sprite.play("Left Walking")
-	else:
-		gretta_sprite.stop()
-	if Input.is_action_pressed("moveRight"):
-		gretta_sprite.play("Right Walking")
-	else:
-		gretta_sprite.stop()
-		
+@onready var sprite: Sprite2D = $CollisionShape2D/AnimatedSprite2D
+
+var direction := Vector2.RIGHT
+
+
+func _ready() -> void:
+	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
+
+	# Choose a random starting direction.
+	var possible_directions := [
+		Vector2.UP,
+		Vector2.DOWN,
+		Vector2.LEFT,
+		Vector2.RIGHT
+	]
+
+	direction = possible_directions.pick_random()
+
+
+func _physics_process(delta: float) -> void:
+	var movement := direction * speed * delta
+	var collision := move_and_collide(movement)
+
+	if collision:
+		# Reflect the movement direction away from the wall.
+		direction = direction.bounce(collision.get_normal()).normalized()
+
+	if direction.x != 0.0:
+		sprite.flip_h = direction.x < 0.0
