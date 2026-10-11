@@ -25,7 +25,7 @@ tile_map_data = PackedByteArray("AAAAAPf/AQAZACkAAAAAAPj/AQAZACoAAAABAPf/AQAaACk
 tile_set = ExtResource("2_ccke3")
 
 [node name="mainCharacter" parent="." unique_id=1622110444 instance=ExtResource("1_g7eoe")]
-speed = 100
+position = Vector2(-883, -451)
 
 [node name="leftLimit" type="Marker2D" parent="." unique_id=2002711896]
 position = Vector2(-983, 32)

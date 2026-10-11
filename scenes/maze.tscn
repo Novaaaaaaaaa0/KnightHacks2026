@@ -9101,8 +9101,7 @@ tile_map_data = PackedByteArray("AADJ/7f/AQAaAC0AAADJ/7j/AQAaAC0AAADK/7f/AQAbAC0
 tile_set = SubResource("TileSet_0cesb")
 
 [node name="mainCharacter" parent="." unique_id=215440872 instance=ExtResource("3_l3biw")]
-position = Vector2(-781, -12)
-speed = 100
+position = Vector2(-766, -14)
 
 [node name="leftLimit" type="Marker2D" parent="." unique_id=827728767]
 position = Vector2(-933, 49)
