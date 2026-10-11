@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SaveSystem="*uid://b5n2d6aidid34"
 UpdateSave="*uid://d4j2qpghoxjo3"
+GlobalVars="*uid://c837u0txfndxw"
 
 [display]
 

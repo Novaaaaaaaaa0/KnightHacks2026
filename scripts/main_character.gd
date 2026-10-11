@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var gretta_sprite = $CollisionShape2D/AnimatedSprite2D
 var direction: String = "none"
 
-func get_input():
+func get_input() -> void:
 	var input_direction = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	velocity = input_direction * speed
 
@@ -13,13 +13,12 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 
-# Most Inefficient animation code in the world
-func _process(_delta):
+# Most Inefficient animation + movement code in the world
+func _process(_delta) -> void:
 	
 	var moving: bool = (Input.is_action_pressed("moveDown") || Input.is_action_just_pressed("moveUp") || Input.is_action_pressed("moveLeft") || Input.is_action_pressed("moveRight"))
 	
 	if (Input.is_action_pressed("Interaction")):
-
 		if ((gretta_sprite.animation == ("Left Walking")) || (gretta_sprite.animation == ("Left Standing"))):
 				gretta_sprite.play("Left Interact")
 		elif ((gretta_sprite.animation == ("Right Walking")) || (gretta_sprite.animation == ("Right Standing"))):
