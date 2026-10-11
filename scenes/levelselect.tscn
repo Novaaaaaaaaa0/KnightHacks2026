@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://bov0rrexh08f1"]
 
+[ext_resource type="Texture2D" uid="uid://b7kp7dnf163we" path="res://assets/sprites/Red flower.png" id="1_vttqt"]
+[ext_resource type="Texture2D" uid="uid://bmryrk8lv5u71" path="res://assets/sprites/Blue flower.png" id="2_4kdbh"]
+
 [sub_resource type="Theme" id="Theme_4y2lm"]
 default_font_size = 150
 
@@ -26,9 +29,17 @@ offset_bottom = 1076.0
 
 [node name="ColorRect2" type="ColorRect" parent="Control/Background" unique_id=652433035]
 layout_mode = 0
-offset_top = 3.0
+offset_top = -8.0
 offset_right = 1920.0
 offset_bottom = 98.0
+color = Color(0, 1, 0, 0.8392157)
+
+[node name="ColorRect5" type="ColorRect" parent="Control/Background" unique_id=398682558]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 970.0
+offset_right = 1914.0
+offset_bottom = 1076.0
 color = Color(0, 1, 0, 0.8392157)
 
 [node name="ColorRect3" type="ColorRect" parent="Control/Background" unique_id=1510498727]
@@ -47,6 +58,24 @@ offset_right = 1921.0
 offset_bottom = 1085.0
 color = Color(0, 0, 1, 0.8392157)
 
+[node name="TextureRect" type="TextureRect" parent="Control/Background" unique_id=2000853358]
+layout_mode = 0
+offset_left = 1025.0
+offset_top = 415.0
+offset_right = 1233.0
+offset_bottom = 623.0
+texture = ExtResource("1_vttqt")
+expand_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Control/Background" unique_id=1646451129]
+layout_mode = 0
+offset_left = 1403.0
+offset_top = 423.0
+offset_right = 1611.0
+offset_bottom = 631.0
+texture = ExtResource("2_4kdbh")
+expand_mode = 5
+
 [node name="Labels" type="Control" parent="Control" unique_id=1634772695]
 anchors_preset = 0
 offset_right = 40.0
@@ -56,10 +85,10 @@ offset_bottom = 40.0
 modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(200, 250)
 layout_mode = 0
-offset_left = 487.0
-offset_top = 98.0
-offset_right = 1333.0
-offset_bottom = 348.0
+offset_left = 147.0
+offset_top = 95.0
+offset_right = 993.0
+offset_bottom = 345.0
 theme = SubResource("Theme_4y2lm")
 text = "Level Select"
 horizontal_alignment = 1
@@ -73,24 +102,32 @@ theme = SubResource("Theme_ckn67")
 
 [node name="Level1" type="Button" parent="Control/Buttons" unique_id=1171180411]
 layout_mode = 0
-offset_left = 568.0
-offset_top = 566.0
-offset_right = 1199.0
-offset_bottom = 712.0
+offset_left = 182.0
+offset_top = 533.0
+offset_right = 813.0
+offset_bottom = 679.0
 text = "Level 2"
 
 [node name="Level2" type="Button" parent="Control/Buttons" unique_id=114938958]
 layout_mode = 0
-offset_left = 568.0
-offset_top = 364.0
-offset_right = 1199.0
-offset_bottom = 510.0
+offset_left = 180.0
+offset_top = 343.0
+offset_right = 811.0
+offset_bottom = 489.0
 text = "Level 1"
 
 [node name="Level3" type="Button" parent="Control/Buttons" unique_id=1584876558]
 layout_mode = 0
-offset_left = 568.0
-offset_top = 769.0
-offset_right = 1199.0
-offset_bottom = 915.0
+offset_left = 179.0
+offset_top = 724.0
+offset_right = 810.0
+offset_bottom = 870.0
 text = "Level 3"
+
+[node name="Level4" type="Button" parent="Control/Buttons" unique_id=1828133384]
+layout_mode = 0
+offset_left = 1135.0
+offset_top = 723.0
+offset_right = 1477.0
+offset_bottom = 868.0
+text = "Back"
