@@ -18,10 +18,13 @@ func _input(event):
 			match currentFlower:
 				"red":
 					print("Interacted with Red Flower")
+					CompletionManager.level1Complete.emit(1)
 				"green":
 					print("Interacted with Green Flower")
+					CompletionManager.level3Complete.emit(3)
 				"blue":
 					print("Interacted with Blue Flower")
+					CompletionManager.level2Complete.emit(2)
 		elif Input.is_action_pressed("Interaction"):
 			print("Nothing to interact with.")
 				
