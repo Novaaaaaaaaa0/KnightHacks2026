@@ -53,7 +53,7 @@ shape = SubResource("CircleShape2D_bec24")
 
 [node name="mainCharacter" parent="." unique_id=1622110444 instance=ExtResource("1_g7eoe")]
 position = Vector2(-883, -451)
-speed = 1000
+speed = 125
 
 [node name="leftLimit" type="Marker2D" parent="." unique_id=2002711896]
 position = Vector2(-983, 32)

@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dkeo25dkg3tdi" path="res://assets/backgrounds/Pine Hills/png/10_front_leafs.png" id="8_y7yat"]
 [ext_resource type="Texture2D" uid="uid://dwyntii7xxaaj" path="res://assets/backgrounds/Pine Hills/png/12_front_trees2.png" id="9_t3dwt"]
 [ext_resource type="Texture2D" uid="uid://b8y8ishoblkke" path="res://assets/backgrounds/Pine Hills/png/11_front_trees1.png" id="10_anfsg"]
+[ext_resource type="Script" uid="uid://pxpiu705dlvv" path="res://scenes/h_box_container.gd" id="14_y7yat"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o8hdv"]
 size = Vector2(450, 150)
@@ -135,6 +136,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 alignment = 1
+script = ExtResource("14_y7yat")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=1520747823]
 layout_mode = 2

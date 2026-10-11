@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="RGB RPG"
-run/main_scene="uid://uwbs0tgmiuru"
+run/main_scene="uid://tw1pyuihjksk"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 SaveSystem="*uid://b5n2d6aidid34"
+UpdateSave="*uid://d4j2qpghoxjo3"
 GlobalVars="*uid://c837u0txfndxw"
 CompletionManager="*uid://b8vp135wyr0su"
 
