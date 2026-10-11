@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cmlgor71b8i84"]
+
+[ext_resource type="SpriteFrames" uid="uid://citq0yrk2hjg0" path="res://assets/sprites/ghostSprite.tres" id="1_55dv3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fmnrv"]
+
+[node name="ghostguy" type="CharacterBody2D" unique_id=1460289728]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1188755247]
+shape = SubResource("CircleShape2D_fmnrv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1856086901]
+sprite_frames = ExtResource("1_55dv3")
+frame_progress = 0.7535285

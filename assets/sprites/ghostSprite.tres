@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://citq0yrk2hjg0"]
+
+[ext_resource type="Texture2D" uid="uid://d03etxxav0csp" path="res://assets/sprites/ghostSprite.png" id="1_amnrr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmbub"]
+atlas = ExtResource("1_amnrr")
+region = Rect2(0, 2, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3x2c"]
+atlas = ExtResource("1_amnrr")
+region = Rect2(0, 28, 32, 26)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmbub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3x2c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]

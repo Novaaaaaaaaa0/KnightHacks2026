@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://b7kp7dnf163we" path="res://assets/sprites/Red flower.png" id="1_vttqt"]
 [ext_resource type="Texture2D" uid="uid://bmryrk8lv5u71" path="res://assets/sprites/Blue flower.png" id="2_4kdbh"]
 [ext_resource type="Texture2D" uid="uid://1k48qodc80nm" path="res://assets/sprites/Green Flower.png" id="3_4kdbh"]
+[ext_resource type="Script" uid="uid://d1hvkb0rh1mgy" path="res://scenes/buttons.gd" id="4_6rap8"]
+[ext_resource type="Script" uid="uid://dj4ggot3tkpgq" path="res://scenes/back.gd" id="5_aaiik"]
 
 [sub_resource type="Theme" id="Theme_4y2lm"]
 default_font_size = 150
@@ -109,6 +111,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme = SubResource("Theme_ckn67")
+script = ExtResource("4_6rap8")
 
 [node name="Level1" type="Button" parent="Control/Buttons" unique_id=114938958]
 layout_mode = 0
@@ -141,3 +144,4 @@ offset_top = 723.0
 offset_right = 1477.0
 offset_bottom = 868.0
 text = "Back"
+script = ExtResource("5_aaiik")
