@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cy3kc4pmgellq"]
+
+[ext_resource type="Shader" uid="uid://dcsepcyddr1uq" path="res://assets/shaders/shaders/colorRemoverShader.gdshader" id="1_5wndc"]
+
+[resource]
+shader = ExtResource("1_5wndc")
+shader_parameter/threshold = 0.0
+shader_parameter/make_transparent = false
+shader_parameter/collectedRed = false
+shader_parameter/collectedBlue = false
+shader_parameter/collectedGreen = false

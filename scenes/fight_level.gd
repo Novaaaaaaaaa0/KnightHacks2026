@@ -1,5 +1,7 @@
 extends Node2D
 
+var colorMaterial = material as ShaderMaterial
+
 # Sets camera limits based on level limits
 func _ready() -> void:
 	var gretta = $mainCharacter/CollisionShape2D/AnimatedSprite2D

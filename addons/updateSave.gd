@@ -1,17 +1,11 @@
-class_name SaveGame extends Node
-
-signal save 
-signal load 
-signal delete
+class_name SaveGame extends Resource
 
 var oneCompleted: bool = false
 var twoCompleted: bool = false
 var threeCompleted: bool = false
-var fourCompleted: bool = false
-var fiveCompleted: bool = false
+
+# RGB = 0, 1, 2
+var colorsCollected: Array[bool] = [false, false, false]
 	
 func _ready() -> void:
-	save.connect(_on_save)
-
-func _on_save():
-	SaveSystem.set_var("Completion", SaveGame.new())
+	colorsCollected[0] = true
