@@ -22,11 +22,11 @@ texture = ExtResource("2_xhxfj")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=1481908244]
 position = Vector2(1.5, 0)
 sprite_frames = ExtResource("3_1mvck")
-animation = &"Left Interact"
+animation = &"Right Walking"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1234509425]
 position = Vector2(-2, 1)
-zoom = Vector2(3, 3)
+zoom = Vector2(5, 5)
 process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
