@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dwfcvqgry0gcy"]
+
+[ext_resource type="SpriteFrames" uid="uid://drn6fpli78pc6" path="res://assets/sprites/teleporter_sprite_frames.tres" id="1_grefp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7y6xb"]
+radius = 16.03122
+
+[node name="EndOfLevel" type="Node2D" unique_id=670383800]
+
+[node name="EndOfLevel" type="AnimatedSprite2D" parent="." unique_id=1698048212]
+unique_name_in_owner = true
+sprite_frames = ExtResource("1_grefp")
+animation = &"Activation"
+
+[node name="Area2D" type="Area2D" parent="EndOfLevel" unique_id=645179372]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndOfLevel/Area2D" unique_id=1097962627]
+shape = SubResource("CircleShape2D_7y6xb")

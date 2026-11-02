@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://b2knkuwe8jhve"]
 
 [ext_resource type="Texture2D" uid="uid://c2m5mi1tdivjj" path="res://assets/ForgottenMemories/TileSet.png" id="1_fgl6e"]
-[ext_resource type="Script" uid="uid://dredecd27a4kw" path="res://scenes/maze.gd" id="1_vqf1n"]
+[ext_resource type="Script" uid="uid://dredecd27a4kw" path="res://scripts/maze.gd" id="1_vqf1n"]
 [ext_resource type="Texture2D" uid="uid://bj8asdo6a207o" path="res://assets/ForgottenMemories/WaterTiles-6frames.png" id="2_l3biw"]
 [ext_resource type="PackedScene" uid="uid://wr1deivfc0wv" path="res://scenes/mainCharacter.tscn" id="3_l3biw"]
 [ext_resource type="PackedScene" uid="uid://cmlgor71b8i84" path="res://scenes/ghostguy.tscn" id="4_8hln8"]

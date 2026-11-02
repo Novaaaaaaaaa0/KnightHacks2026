@@ -1,19 +1,32 @@
-extends Area2D
+extends Node2D
 
 @onready var area = %InteractiveAreaDetection
+@onready var IconSprite = $sprite
+@export var ItemColor: String = ""
+@export var ItemTexture: Texture
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass
+	if not Engine.is_editor_hint():
+		IconSprite.texture = ItemTexture
+	if not Engine.is_editor_hint():
+		IconSprite.texture = ItemTexture
+		
+		area.body_entered.connect(_on_body_entered)
+		area.body_exited.connect(_on_body_exited)
+	
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if not Engine.is_editor_hint():
+		IconSprite.texture = ItemTexture
 
-func _on_body_entered(body: Node2D) -> void:
+
+func _on_body_entered(_body: Node2D) -> void:
 	GlobalVars.isInteractable = true
-	GlobalVars.currentFlower = "red"
+	GlobalVars.currentFlower = String(ItemColor)
 
-func _on_body_exited(body: Node2D) -> void:
+func _on_body_exited(_body: Node2D) -> void:
 	GlobalVars.isInteractable = false
 	GlobalVars.currentFlower = "none"

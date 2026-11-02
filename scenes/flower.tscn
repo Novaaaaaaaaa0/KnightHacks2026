@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://upqkwaj5u8ql"]
+
+[ext_resource type="Script" uid="uid://qoc5sj7relaw" path="res://scripts/interactive_area_detection.gd" id="2_agc10"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqhtc"]
+size = Vector2(10.999996, 18)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ym8cu"]
+radius = 26.172504
+
+[node name="flower" type="Node2D" unique_id=807994660]
+script = ExtResource("2_agc10")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=1228979047]
+use_parent_material = true
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="sprite" unique_id=1801832085]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sprite/StaticBody2D" unique_id=105561523]
+shape = SubResource("RectangleShape2D_rqhtc")
+
+[node name="InteractiveAreaDetection" type="Area2D" parent="sprite" unique_id=1985381630]
+unique_name_in_owner = true
+monitorable = false
+
+[node name="InteractiveArea" type="CollisionShape2D" parent="sprite/InteractiveAreaDetection" unique_id=1115817624]
+shape = SubResource("CircleShape2D_ym8cu")
+
+[connection signal="body_entered" from="sprite/InteractiveAreaDetection" to="sprite/InteractiveAreaDetection" method="_on_body_entered"]
+[connection signal="body_exited" from="sprite/InteractiveAreaDetection" to="sprite/InteractiveAreaDetection" method="_on_body_exited"]

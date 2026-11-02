@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://g10hutfu0fi5"]
 
 [ext_resource type="Texture2D" uid="uid://c55ar8k4b7yy3" path="res://assets/ForgottenMemories/Props.png" id="1_mhdqy"]
-[ext_resource type="Script" uid="uid://iesd4ccrhxkn" path="res://scenes/fight_level.gd" id="1_of54k"]
+[ext_resource type="Script" uid="uid://iesd4ccrhxkn" path="res://scripts/fight_level.gd" id="1_of54k"]
 [ext_resource type="Texture2D" uid="uid://c2m5mi1tdivjj" path="res://assets/ForgottenMemories/TileSet.png" id="2_vqef2"]
 [ext_resource type="Texture2D" uid="uid://crpv1rshhvpjt" path="res://assets/ForgottenMemories/Trees_seperated.png" id="3_of54k"]
 [ext_resource type="PackedScene" uid="uid://wr1deivfc0wv" path="res://scenes/mainCharacter.tscn" id="3_vqef2"]
