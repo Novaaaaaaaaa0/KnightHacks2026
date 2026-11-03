@@ -2,24 +2,29 @@
 
 [ext_resource type="Texture2D" uid="uid://dacs1fisith1f" path="res://assets/sprites/teleporter.png" id="1_0hm2m"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xmt80"]
-atlas = ExtResource("1_0hm2m")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ftg0q"]
 atlas = ExtResource("1_0hm2m")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hm2m"]
+atlas = ExtResource("1_0hm2m")
+region = Rect2(0, 0, 32, 32)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xmt80")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ftg0q")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Activation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hm2m")
+}],
+"loop": 1,
+"name": &"Default",
 "speed": 5.0
 }]

@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dwfcvqgry0gcy"]
 
+[ext_resource type="Script" uid="uid://dcsoxqokpb70i" path="res://scenes/end_of_level.gd" id="1_7y6xb"]
 [ext_resource type="SpriteFrames" uid="uid://drn6fpli78pc6" path="res://assets/sprites/teleporter_sprite_frames.tres" id="1_grefp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7y6xb"]
 radius = 16.03122
 
 [node name="EndOfLevel" type="Node2D" unique_id=670383800]
+script = ExtResource("1_7y6xb")
 
 [node name="EndOfLevel" type="AnimatedSprite2D" parent="." unique_id=1698048212]
 unique_name_in_owner = true
@@ -16,3 +18,6 @@ animation = &"Activation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EndOfLevel/Area2D" unique_id=1097962627]
 shape = SubResource("CircleShape2D_7y6xb")
+
+[connection signal="body_entered" from="EndOfLevel/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="EndOfLevel/Area2D" to="." method="_on_area_2d_body_exited"]
