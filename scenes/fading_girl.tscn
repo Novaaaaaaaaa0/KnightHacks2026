@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://0nah6nckoxm1"]
+
+[node name="FadingGirl" type="Node2D" unique_id=1942408733]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=26889472]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2062797302]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=1249739621]

@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		direction = -direction
 
 		# Move slightly away from the wall to prevent sticking.
-		move_and_collide(direction * 2.0)
+		move_and_collide(direction * speed * delta)
 
 	if direction.x != 0.0:
 		sprite.flip_h = direction.x < 0.0
