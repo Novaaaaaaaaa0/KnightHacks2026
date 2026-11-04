@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://upqkwaj5u8ql" path="res://scenes/flower.tscn" id="6_voev6"]
 [ext_resource type="Texture2D" uid="uid://1k48qodc80nm" path="res://assets/sprites/Green Flower.png" id="9_b4bn3"]
 [ext_resource type="Texture2D" uid="uid://bmryrk8lv5u71" path="res://assets/sprites/Blue flower.png" id="9_rih6e"]
+[ext_resource type="Texture2D" uid="uid://c6sh6pvw4ivvi" path="res://assets/House.png" id="10_rih6e"]
 
 [node name="Puzzles" type="Node2D" unique_id=378654457]
 material = ExtResource("1_voev6")
@@ -67,3 +68,8 @@ ItemTexture = ExtResource("2_sye7v")
 position = Vector2(193, 696)
 ItemColor = "green"
 ItemTexture = ExtResource("9_b4bn3")
+
+[node name="House" type="Sprite2D" parent="." unique_id=183278305]
+use_parent_material = true
+position = Vector2(-304, -518)
+texture = ExtResource("10_rih6e")
