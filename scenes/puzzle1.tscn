@@ -76,7 +76,17 @@ ItemTexture = ExtResource("9_b4bn3")
 
 [node name="House" type="Sprite2D" parent="." unique_id=183278305]
 use_parent_material = true
-position = Vector2(-304, -518)
+position = Vector2(-307, -555)
+texture = ExtResource("10_rih6e")
+
+[node name="House2" type="Sprite2D" parent="." unique_id=1328869307]
+use_parent_material = true
+position = Vector2(-193, -555)
+texture = ExtResource("10_rih6e")
+
+[node name="House3" type="Sprite2D" parent="." unique_id=42282331]
+use_parent_material = true
+position = Vector2(-79, -556)
 texture = ExtResource("10_rih6e")
 
 [node name="DialogueManager" parent="." unique_id=2019083962 instance=ExtResource("12_eso5p")]
