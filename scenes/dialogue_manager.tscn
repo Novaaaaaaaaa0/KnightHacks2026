@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://t0bgtdae615"]
+
+[ext_resource type="Script" uid="uid://cqh6ft84jl1xm" path="res://dialogue_manager.gd" id="1_smvbx"]
+[ext_resource type="Texture2D" uid="uid://bmidlci445roe" path="res://assets/RetroPaid/RetroPaid/retro.png" id="2_61474"]
+[ext_resource type="FontFile" uid="uid://b53lpgo8eeivr" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="3_5hf3l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckn67"]
+atlas = ExtResource("2_61474")
+region = Rect2(2, 273, 172, 62)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ckn67"]
+font = ExtResource("3_5hf3l")
+font_size = 70
+
+[node name="DialogueManager" type="CanvasLayer" unique_id=2019083962]
+process_mode = 3
+script = ExtResource("1_smvbx")
+
+[node name="Control" type="Control" parent="." unique_id=1432566290]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogueBox" type="TextureRect" parent="Control" unique_id=122465528]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_ckn67")
+
+[node name="DialogueText" type="Label" parent="Control" unique_id=389395431]
+custom_minimum_size = Vector2(0, 300)
+custom_maximum_size = Vector2(1800, 350)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = 45.0
+offset_right = -66.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dialogue Text Example"
+label_settings = SubResource("LabelSettings_ckn67")
+autowrap_mode = 3

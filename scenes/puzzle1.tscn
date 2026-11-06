@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://1k48qodc80nm" path="res://assets/sprites/Green Flower.png" id="9_b4bn3"]
 [ext_resource type="Texture2D" uid="uid://bmryrk8lv5u71" path="res://assets/sprites/Blue flower.png" id="9_rih6e"]
 [ext_resource type="Texture2D" uid="uid://c6sh6pvw4ivvi" path="res://assets/House.png" id="10_rih6e"]
+[ext_resource type="PackedScene" uid="uid://0nah6nckoxm1" path="res://scenes/fading_girl.tscn" id="11_8jut7"]
 
 [node name="Puzzles" type="Node2D" unique_id=378654457]
 material = ExtResource("1_voev6")
@@ -73,3 +74,6 @@ ItemTexture = ExtResource("9_b4bn3")
 use_parent_material = true
 position = Vector2(-304, -518)
 texture = ExtResource("10_rih6e")
+
+[node name="FadingGirl" parent="." unique_id=1942408733 instance=ExtResource("11_8jut7")]
+position = Vector2(-823, -494)

@@ -1,9 +1,33 @@
 [gd_scene format=3 uid="uid://0nah6nckoxm1"]
 
+[ext_resource type="Texture2D" uid="uid://0vd8jq54w7f" path="res://assets/sprites/faded girl.png" id="1_xl3w6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ufn83"]
+radius = 7.0
+height = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oopgg"]
+atlas = ExtResource("1_xl3w6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_akb6l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oopgg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="FadingGirl" type="Node2D" unique_id=1942408733]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=26889472]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2062797302]
+shape = SubResource("CapsuleShape2D_ufn83")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=1249739621]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_akb6l")
