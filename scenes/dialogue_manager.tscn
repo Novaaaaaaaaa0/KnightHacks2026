@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://t0bgtdae615"]
 
-[ext_resource type="Script" uid="uid://cqh6ft84jl1xm" path="res://dialogue_manager.gd" id="1_smvbx"]
+[ext_resource type="Script" uid="uid://cqh6ft84jl1xm" path="res://scripts/dialogue_manager.gd" id="1_smvbx"]
 [ext_resource type="Texture2D" uid="uid://bmidlci445roe" path="res://assets/RetroPaid/RetroPaid/retro.png" id="2_61474"]
 [ext_resource type="FontFile" uid="uid://b53lpgo8eeivr" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="3_5hf3l"]
 

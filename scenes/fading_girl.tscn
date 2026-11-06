@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://0nah6nckoxm1"]
 
+[ext_resource type="Script" uid="uid://cu5mru7ya2q13" path="res://scenes/fading_girl.gd" id="1_oopgg"]
 [ext_resource type="Texture2D" uid="uid://0vd8jq54w7f" path="res://assets/sprites/faded girl.png" id="1_xl3w6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ufn83"]
@@ -21,7 +22,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ulkk"]
+radius = 19.0
+
 [node name="FadingGirl" type="Node2D" unique_id=1942408733]
+script = ExtResource("1_oopgg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=26889472]
 
@@ -31,3 +36,11 @@ shape = SubResource("CapsuleShape2D_ufn83")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=1249739621]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_akb6l")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1922946393]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1996320883]
+shape = SubResource("CircleShape2D_8ulkk")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

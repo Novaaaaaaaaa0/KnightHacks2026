@@ -6,21 +6,26 @@ signal delete
 signal level_complete
 
 @export var isInteractable: bool = false
-@export var currentFlower: String = "none"
+@export var currentInteraction: String = "none"
 @export var currentLevel: int
 @onready var numCollected = 0
+@onready var dialogue = preload("res://scenes/dialogue_manager.tscn")
+var dialogue_manager
 
+var lines: Array[String] = []
 var flowerCollected = [false, false, false] # 0 = red, 1 = green, 2 = blue
 
 func _ready() -> void:
+	dialogue_manager = dialogue.instantiate()
+	get_tree().current_scene.add_child(dialogue_manager)
 	save.connect(_on_save)
 
 func _input(event):
 	if (get_tree().current_scene.scene_file_path == 'res://scenes/titlescreen.tscn'):
 		pass
 	else:	
-		if isInteractable == true && Input.is_action_pressed("Interaction"):
-			match currentFlower:
+		if isInteractable == true && Input.is_action_just_pressed("Interaction"):
+			match currentInteraction:
 				"red":
 					if(flowerCollected[0] == false):
 						print("Interacted with Red Flower")
@@ -39,6 +44,9 @@ func _input(event):
 				"teleport":
 					if numCollected == 3:
 						load_next_level()
+				"fading_girl":
+					run_dialogue()
+					
 			check_level_completion()
 		elif Input.is_action_pressed("Interaction"):
 			print("Nothing to interact with.")
@@ -67,3 +75,27 @@ func load_next_level():
 			3:
 				CompletionManager.level3Complete.emit(3)
 				pass
+
+func run_dialogue():
+	match currentLevel:
+		1:
+			if(numCollected != 3):
+				lines = get_lines("res://scripts/Dialogue/lvl1start.txt")
+		2:
+			pass
+		3:
+			pass
+	dialogue_manager.start_dialogue(lines);
+	isInteractable = false
+	
+func get_lines(fileName):
+	var result: Array[String] = []
+	var file = FileAccess.open(fileName, FileAccess.READ)
+	var i = 0
+	while not file.eof_reached():
+		var line = file.get_line()
+		result.append(line)
+		i += 1
+	file.close()
+	print(result)
+	return result

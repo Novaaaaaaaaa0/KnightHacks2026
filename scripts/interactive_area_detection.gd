@@ -23,8 +23,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(_body: Node2D) -> void:
 	GlobalVars.isInteractable = true
-	GlobalVars.currentFlower = String(ItemColor)
+	GlobalVars.currentInteraction = String(ItemColor)
 
 func _on_body_exited(_body: Node2D) -> void:
 	GlobalVars.isInteractable = false
-	GlobalVars.currentFlower = "none"
+	GlobalVars.currentInteraction = "none"
