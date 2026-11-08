@@ -3,9 +3,28 @@
 [ext_resource type="Script" uid="uid://bes5usw62i327" path="res://scripts/main_character.gd" id="1_1iwj0"]
 [ext_resource type="Texture2D" uid="uid://ckq0gvhs6p8sj" path="res://assets/sprites/RBG RPG Gretta.png" id="2_xhxfj"]
 [ext_resource type="SpriteFrames" uid="uid://cgxw6nq5sr5rj" path="res://assets/sprites/gretta_sprite_frames.tres" id="3_1mvck"]
+[ext_resource type="Script" uid="uid://b51nlmjcl0txw" path="res://scenes/death.gd" id="4_kwwav"]
+[ext_resource type="FontFile" uid="uid://b53lpgo8eeivr" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="4_nthm3"]
+[ext_resource type="Texture2D" uid="uid://bmidlci445roe" path="res://assets/RetroPaid/RetroPaid/retro.png" id="5_kwwav"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trt31"]
 size = Vector2(13, 20)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ckn67"]
+font = ExtResource("4_nthm3")
+font_size = 200
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5162"]
+atlas = ExtResource("5_kwwav")
+region = Rect2(98, 34, 91, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaax5"]
+atlas = ExtResource("5_kwwav")
+region = Rect2(196, 36, 91, 27)
+
+[sub_resource type="LabelSettings" id="LabelSettings_56tk6"]
+font = ExtResource("4_nthm3")
+font_size = 25
 
 [node name="mainCharacter" type="CharacterBody2D" unique_id=215440872]
 script = ExtResource("1_1iwj0")
@@ -32,3 +51,102 @@ zoom = Vector2(5, 5)
 process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="Death" type="CanvasLayer" parent="." unique_id=1825321321]
+process_mode = 3
+visible = false
+script = ExtResource("4_kwwav")
+
+[node name="Control" type="Control" parent="Death" unique_id=1265209783]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Death/Control" unique_id=1377470401]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7372549, 0, 0.21176471, 0.27450982)
+
+[node name="Label" type="Label" parent="Death/Control" unique_id=2139455784]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -440.0
+offset_top = 147.0
+offset_right = 440.0
+offset_bottom = 347.0
+grow_horizontal = 2
+text = "You Died..."
+label_settings = SubResource("LabelSettings_ckn67")
+
+[node name="Quit" type="TextureButton" parent="Death/Control" unique_id=61734322]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -319.0
+offset_top = -373.0
+offset_right = -228.0
+offset_bottom = -345.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(7, 7)
+texture_normal = SubResource("AtlasTexture_x5162")
+texture_pressed = SubResource("AtlasTexture_jaax5")
+
+[node name="Label" type="Label" parent="Death/Control/Quit" unique_id=1698526830]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 25.428566
+grow_horizontal = 2
+offset_transform_scale = Vector2(7, 7)
+text = "QUIT"
+label_settings = SubResource("LabelSettings_56tk6")
+
+[node name="Retry" type="TextureButton" parent="Death/Control" unique_id=1207548230]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -319.0
+offset_top = -619.9999
+offset_right = -228.0
+offset_bottom = -591.9999
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(7, 7)
+texture_normal = SubResource("AtlasTexture_x5162")
+texture_pressed = SubResource("AtlasTexture_jaax5")
+
+[node name="Label" type="Label" parent="Death/Control/Retry" unique_id=1255896226]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 25.428566
+grow_horizontal = 2
+offset_transform_scale = Vector2(7, 7)
+text = "RETRY"
+label_settings = SubResource("LabelSettings_56tk6")
+
+[connection signal="playerDied" from="." to="." method="_on_player_died"]
+[connection signal="pressed" from="Death/Control/Quit" to="Death" method="_on_quit_pressed"]
+[connection signal="pressed" from="Death/Control/Retry" to="Death" method="_on_retry_pressed"]

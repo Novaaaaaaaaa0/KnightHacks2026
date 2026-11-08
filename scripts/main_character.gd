@@ -1,8 +1,12 @@
 extends CharacterBody2D
 
 @export var speed: int = 100
+@export var health: int = 100
 @onready var gretta_sprite = $CollisionShape2D/AnimatedSprite2D
+@onready var deathScreen = $Death
 var direction: String = "none"
+
+signal playerDied
 
 func get_input() -> void:
 	var input_direction = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
@@ -55,3 +59,8 @@ func _process(_delta) -> void:
 			"right":
 				gretta_sprite.play("Right Standing")
 		direction = "none"
+
+
+func _on_player_died() -> void:
+	get_tree().paused = true
+	deathScreen.visible = true
