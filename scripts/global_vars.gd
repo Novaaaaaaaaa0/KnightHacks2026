@@ -81,10 +81,18 @@ func run_dialogue():
 		1:
 			if(numCollected != 3):
 				lines = get_lines("res://scripts/Dialogue/lvl1start.txt")
+			else:
+				lines = get_lines("res://scripts/Dialogue/lvl1end.txt")
 		2:
-			pass
+			if(numCollected != 3):
+				lines = get_lines("res://scripts/Dialogue/lvl2start.txt")
+			else:
+				pass
 		3:
-			pass
+			if(numCollected != 3):
+				pass
+			else:
+				pass
 	dialogue_manager.start_dialogue(lines);
 	isInteractable = false
 	

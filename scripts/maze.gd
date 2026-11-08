@@ -4,12 +4,14 @@ var colorMaterial = material as ShaderMaterial
 
 @onready var endOfLevel = $EndOfLevel
 
+
 # Sets camera limits based on level limits
 # Sets default animation
 func _ready() -> void:
 	var gretta = $mainCharacter/CollisionShape2D/AnimatedSprite2D
 	gretta.play("Front Standing")
 	GlobalVars.level_complete.connect(_on_level_complete)
+	GlobalVars.currentLevel = 2
 	
 	var cam = $mainCharacter/Camera2D
 	cam.set_limit(SIDE_LEFT, int($leftLimit.position.x))
