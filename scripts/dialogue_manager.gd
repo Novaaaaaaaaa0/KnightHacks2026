@@ -11,14 +11,17 @@ func _ready() -> void:
 	dialogue_box.visible = false
 
 func start_dialogue(lines: Array[String]):
-	get_tree().paused = true
+	if is_inside_tree():
+		get_tree().paused = true
 	
-	is_dialogue_active = true
-	dialogue_lines = lines
-	current_line = 0
-	dialogue_box.visible = true
-	dialogue_text.visible = true
-	dialogue_text.text = dialogue_lines[current_line]
+		is_dialogue_active = true
+		dialogue_lines = lines
+		current_line = 0
+		dialogue_box.visible = true
+		dialogue_text.visible = true
+		dialogue_text.text = dialogue_lines[current_line]
+	else:
+		print("ERROR: Not in tree!")
 	
 func advance_dialogue():
 	if current_line < dialogue_lines.size() - 1:

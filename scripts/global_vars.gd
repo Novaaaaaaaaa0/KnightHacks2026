@@ -17,13 +17,15 @@ var flowerCollected = [false, false, false] # 0 = red, 1 = green, 2 = blue
 
 func _ready() -> void:
 	dialogue_manager = dialogue.instantiate()
-	get_tree().current_scene.add_child(dialogue_manager)
+	get_tree().root.call_deferred("add_child",dialogue_manager)
 	save.connect(_on_save)
 
 func _input(event):
+	var activeScene = get_tree().current_scene
+	
 	if (get_tree().current_scene.scene_file_path == 'res://scenes/titlescreen.tscn'):
 		pass
-	else:	
+	if activeScene != null:	
 		if isInteractable == true && Input.is_action_just_pressed("Interaction"):
 			match currentInteraction:
 				"red":
@@ -69,12 +71,20 @@ func load_next_level():
 			1:
 				CompletionManager.level1Complete.emit(1)
 				get_tree().change_scene_to_file("res://scenes/maze.tscn")
+				await get_tree().process_frame
 			2:
 				CompletionManager.level2Complete.emit(2)
 				get_tree().change_scene_to_file("res://scenes/fight_level.tscn")
+				await get_tree().process_frame
 			3:
 				CompletionManager.level3Complete.emit(3)
+				await get_tree().process_frame
 				pass
+
+func _deferred_dialogue():
+	if get_tree().current_scene:
+		get_tree().current_scene.add_child(dialogue_manager)
+
 
 func run_dialogue():
 	match currentLevel:
@@ -93,6 +103,7 @@ func run_dialogue():
 				pass
 			else:
 				pass
+	#if(lines != null):
 	dialogue_manager.start_dialogue(lines);
 	isInteractable = false
 	

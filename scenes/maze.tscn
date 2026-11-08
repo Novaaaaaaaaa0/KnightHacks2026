@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b7kp7dnf163we" path="res://assets/sprites/Red flower.png" id="9_tmhqj"]
 [ext_resource type="Texture2D" uid="uid://1k48qodc80nm" path="res://assets/sprites/Green Flower.png" id="10_hipra"]
 [ext_resource type="Texture2D" uid="uid://bmryrk8lv5u71" path="res://assets/sprites/Blue flower.png" id="11_qhcyp"]
+[ext_resource type="PackedScene" uid="uid://b0e3u7cjfyamu" path="res://scenes/pause_gui.tscn" id="12_tmhqj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1nuxl"]
 texture = ExtResource("1_fgl6e")
@@ -9147,3 +9148,5 @@ ItemTexture = ExtResource("11_qhcyp")
 
 [node name="mainCharacter" parent="." unique_id=215440872 instance=ExtResource("3_l3biw")]
 position = Vector2(-758, -6)
+
+[node name="PauseGUI" parent="." unique_id=1942708293 instance=ExtResource("12_tmhqj")]
