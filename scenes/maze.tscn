@@ -9150,3 +9150,4 @@ ItemTexture = ExtResource("11_qhcyp")
 position = Vector2(-758, -6)
 
 [node name="PauseGUI" parent="." unique_id=1942708293 instance=ExtResource("12_tmhqj")]
+visible = false
