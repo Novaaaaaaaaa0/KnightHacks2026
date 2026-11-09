@@ -3,7 +3,7 @@
 
 **!!! Unfinished !!!**
 A short-puzzle game based on color theory, made by 3 beginner game designers.
-There are plans to continue development in the future.
+Currently, development is being continued by Kade V.
 
 Plugins Used
 https://github.com/AdamKormos/SaveMadeEasy

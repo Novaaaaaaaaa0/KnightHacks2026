@@ -107,6 +107,7 @@ func run_dialogue():
 	dialogue_manager.start_dialogue(lines);
 	isInteractable = false
 	
+# Dialogue Helper function
 func get_lines(fileName):
 	var result: Array[String] = []
 	var file = FileAccess.open(fileName, FileAccess.READ)

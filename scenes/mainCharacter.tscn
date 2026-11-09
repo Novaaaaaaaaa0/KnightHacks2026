@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://wr1deivfc0wv"]
 
 [ext_resource type="Script" uid="uid://bes5usw62i327" path="res://scripts/main_character.gd" id="1_1iwj0"]
-[ext_resource type="Texture2D" uid="uid://ckq0gvhs6p8sj" path="res://assets/sprites/RBG RPG Gretta.png" id="2_xhxfj"]
 [ext_resource type="SpriteFrames" uid="uid://cgxw6nq5sr5rj" path="res://assets/sprites/gretta_sprite_frames.tres" id="3_1mvck"]
 [ext_resource type="Script" uid="uid://b51nlmjcl0txw" path="res://scenes/death.gd" id="4_kwwav"]
 [ext_resource type="FontFile" uid="uid://b53lpgo8eeivr" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="4_nthm3"]
@@ -33,17 +32,10 @@ script = ExtResource("1_1iwj0")
 position = Vector2(-2.5, 1)
 shape = SubResource("RectangleShape2D_trt31")
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=470907157]
-visible = false
-position = Vector2(0.5, 0)
-texture = ExtResource("2_xhxfj")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=1481908244]
 position = Vector2(1.5, 0)
 sprite_frames = ExtResource("3_1mvck")
-animation = &"Left Interact"
-frame = 3
-frame_progress = 1.0
+animation = &"Front Interact"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1234509425]
 position = Vector2(-2, 1)

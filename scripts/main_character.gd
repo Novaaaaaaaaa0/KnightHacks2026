@@ -28,6 +28,10 @@ func _process(_delta) -> void:
 				
 		elif ((gretta_sprite.animation == ("Right Walking")) || (gretta_sprite.animation == ("Right Standing"))):
 				gretta_sprite.play("Right Interact")
+		elif((gretta_sprite.animation == ("Front Walking")) || (gretta_sprite.animation == ("Front Standing"))):
+				gretta_sprite.play("Front Interact")
+		elif((gretta_sprite.animation == ("Back Walking")) || (gretta_sprite.animation == ("Back Standing"))):
+				gretta_sprite.play("Back Interact")
 				
 	
 	elif moving:
