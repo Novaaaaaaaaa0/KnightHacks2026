@@ -12,3 +12,6 @@ shape = SubResource("CircleShape2D_fmnrv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1856086901]
 sprite_frames = ExtResource("1_55dv3")
 frame_progress = 0.7535285
+
+[node name="Timer" type="Timer" parent="." unique_id=522807096]
+wait_time = 1.5

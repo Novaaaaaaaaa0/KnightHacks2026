@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 enum{
 	IDLE, 
@@ -17,17 +17,21 @@ var direction = Vector2.RIGHT
 func _ready() -> void:
 	randomize()
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	
 	match state:
 		IDLE:
+			velocity = Vector2.ZERO
 			pass
 		NEW_DIRECTION:
 			direction = choose([Vector2.RIGHT, Vector2.LEFT, Vector2.DOWN, Vector2.UP])
-			state = IDLE
-			
+			state = choose([IDLE, WALKING])
 		WALKING:
-			position -= delta * speed * direction
-			
+			#position -= delta * speed * direction OLD WAY
+			velocity = speed * -direction
+	
+	move_and_slide()
+	
 	match direction:
 		Vector2.RIGHT:
 			animation.play("Right")

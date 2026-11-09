@@ -85,7 +85,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ckn67"]
 radius = 6.0827627
 
-[node name="Slime" type="Node2D" unique_id=1666948179]
+[node name="Slime" type="CharacterBody2D" unique_id=1381117601]
 script = ExtResource("1_p2gj0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2145497591]
@@ -93,16 +93,12 @@ sprite_frames = SubResource("SpriteFrames_ckn67")
 animation = &"Back"
 frame_progress = 0.34484246
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838708651]
+position = Vector2(-1, 6)
+shape = SubResource("CircleShape2D_ckn67")
+
 [node name="Timer" type="Timer" parent="." unique_id=336850065]
 wait_time = 1.5
 autostart = true
-
-[node name="AnimateableBody2D" type="CharacterBody2D" parent="." unique_id=849256777]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimateableBody2D" unique_id=1838708651]
-position = Vector2(-1, 6)
-shape = SubResource("CircleShape2D_ckn67")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
