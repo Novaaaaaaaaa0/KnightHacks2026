@@ -177,6 +177,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(450, 150)
 custom_maximum_size = Vector2(450, 150)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = SubResource("AtlasTexture_2kv06")
 texture_pressed = SubResource("AtlasTexture_683ma")
 ignore_texture_size = true
@@ -205,6 +206,7 @@ uppercase = true
 custom_minimum_size = Vector2(450, 150)
 custom_maximum_size = Vector2(450, 150)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = SubResource("AtlasTexture_2kv06")
 texture_pressed = SubResource("AtlasTexture_683ma")
 ignore_texture_size = true
@@ -248,4 +250,5 @@ script = ExtResource("2_3jj3l")
 one_shot = true
 
 [connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/Start" to="Control/HBoxContainer" method="_on_start_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/Quit" to="Control/HBoxContainer" method="_on_quit_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/Save" to="Control/HBoxContainer/VBoxContainer/Save" method="_on_pressed"]
