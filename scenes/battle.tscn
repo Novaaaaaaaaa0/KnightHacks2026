@@ -37,10 +37,10 @@ font_size = 100
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_en1px"]
 bg_color = Color(0, 0, 0, 0.47058824)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
 border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rap8"]
@@ -48,6 +48,18 @@ bg_color = Color(0, 0, 0, 0.2901961)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lsdt"]
 bg_color = Color(0, 0, 0, 0.2901961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbnjo"]
+bg_color = Color(0.22352941, 0.13725491, 0.26666668, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vkkk3"]
+font = ExtResource("1_th188")
+font_size = 100
 
 [node name="Battle" type="Control" unique_id=446483073]
 layout_mode = 3
@@ -184,11 +196,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
 
 [node name="Actions" type="HBoxContainer" parent="ActionsPanel/MarginContainer" unique_id=1243475069]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 30
 alignment = 1
 
 [node name="Attack" type="Button" parent="ActionsPanel/MarginContainer/Actions" unique_id=1417383487]
@@ -225,12 +239,34 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_6rap8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4lsdt")
 text = "Run"
 
-[node name="Textbox" type="Panel" parent="." unique_id=572274964]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=305378821]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -315.0
+offset_top = -336.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Textbox" type="Panel" parent="MarginContainer" unique_id=572274964]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sbnjo")
+
+[node name="Label" type="Label" parent="MarginContainer/Textbox" unique_id=1895261594]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 28.0
+offset_right = -32.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "A SLIME appears!"
+label_settings = SubResource("LabelSettings_vkkk3")
