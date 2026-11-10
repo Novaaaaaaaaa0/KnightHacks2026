@@ -16,11 +16,32 @@
 [ext_resource type="Texture2D" uid="uid://dwyntii7xxaaj" path="res://assets/backgrounds/Pine Hills/png/12_front_trees2.png" id="9_t3dwt"]
 [ext_resource type="Texture2D" uid="uid://b8y8ishoblkke" path="res://assets/backgrounds/Pine Hills/png/11_front_trees1.png" id="10_anfsg"]
 [ext_resource type="Script" uid="uid://pxpiu705dlvv" path="res://scripts/h_box_container.gd" id="14_y7yat"]
+[ext_resource type="FontFile" uid="uid://b53lpgo8eeivr" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="16_anfsg"]
+[ext_resource type="Texture2D" uid="uid://bmidlci445roe" path="res://assets/RetroPaid/RetroPaid/retro.png" id="17_rh5o5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4y2lm"]
+line_spacing = 2.0
+font = ExtResource("16_anfsg")
+font_size = 150
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kv06"]
+atlas = ExtResource("17_rh5o5")
+region = Rect2(97, 34, 94, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_683ma"]
+atlas = ExtResource("17_rh5o5")
+region = Rect2(195, 36, 92, 27)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ckn67"]
+line_spacing = 1.0
+font = ExtResource("16_anfsg")
+font_size = 100
+shadow_size = 13
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_trt31"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o8hdv"]
 size = Vector2(450, 150)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_trt31"]
 
 [node name="Titlescreen" type="Node2D" unique_id=1356205235]
 
@@ -140,22 +161,73 @@ script = ExtResource("14_y7yat")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=1520747823]
 layout_mode = 2
+size_flags_stretch_ratio = 0.38
 alignment = 1
 
 [node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer" unique_id=1497311627]
 custom_minimum_size = Vector2(200, 250)
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 0
+size_flags_horizontal = 6
 theme = ExtResource("1_6d6rd")
 text = "RGB RPG"
+label_settings = SubResource("LabelSettings_4y2lm")
 horizontal_alignment = 1
 
 [node name="Start" type="TextureButton" parent="Control/HBoxContainer/VBoxContainer" unique_id=1760175327]
 custom_minimum_size = Vector2(450, 150)
 custom_maximum_size = Vector2(450, 150)
 layout_mode = 2
-texture_normal = SubResource("PlaceholderTexture2D_o8hdv")
+texture_normal = SubResource("AtlasTexture_2kv06")
+texture_pressed = SubResource("AtlasTexture_683ma")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer/Start" unique_id=132194135]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -61.0
+offset_right = 80.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+label_settings = SubResource("LabelSettings_ckn67")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Quit" type="TextureButton" parent="Control/HBoxContainer/VBoxContainer" unique_id=1422534445]
+custom_minimum_size = Vector2(450, 150)
+custom_maximum_size = Vector2(450, 150)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_2kv06")
+texture_pressed = SubResource("AtlasTexture_683ma")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer/Quit" unique_id=1316571764]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -63.0
+offset_right = 80.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+label_settings = SubResource("LabelSettings_ckn67")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="Panel" type="Panel" parent="Control/HBoxContainer/VBoxContainer" unique_id=1981708914]
 custom_minimum_size = Vector2(20, 20)
@@ -163,6 +235,7 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_trt31")
 
 [node name="Save" type="TextureButton" parent="Control/HBoxContainer/VBoxContainer" unique_id=61284690]
+visible = false
 custom_minimum_size = Vector2(450, 150)
 custom_maximum_size = Vector2(450, 150)
 layout_mode = 2
@@ -171,4 +244,8 @@ size_flags_vertical = 4
 texture_normal = SubResource("PlaceholderTexture2D_o8hdv")
 script = ExtResource("2_3jj3l")
 
+[node name="Timer" type="Timer" parent="." unique_id=1507246048]
+one_shot = true
+
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/Start" to="Control/HBoxContainer" method="_on_start_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/Save" to="Control/HBoxContainer/VBoxContainer/Save" method="_on_pressed"]

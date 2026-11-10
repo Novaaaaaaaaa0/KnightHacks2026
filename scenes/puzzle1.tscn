@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cxjsqhe063sxs" path="res://assets/sprites/house with shadow smaller.png" id="13_2kv06"]
 [ext_resource type="PackedScene" uid="uid://b0e3u7cjfyamu" path="res://scenes/pause_gui.tscn" id="13_lfoye"]
 [ext_resource type="PackedScene" uid="uid://du68r3dcapk6b" path="res://scenes/slime.tscn" id="14_2kv06"]
+[ext_resource type="PackedScene" uid="uid://cdvfhjgjtqg56" path="res://scenes/ghost.tscn" id="15_683ma"]
 
 [node name="Puzzles" type="Node2D" unique_id=378654457]
 material = ExtResource("1_voev6")
@@ -108,3 +109,9 @@ texture = ExtResource("13_2kv06")
 
 [node name="Slime" parent="." unique_id=1666948179 instance=ExtResource("14_2kv06")]
 position = Vector2(-811, -449)
+
+[node name="Timer" type="Timer" parent="." unique_id=1168014352]
+one_shot = true
+
+[node name="Ghost" parent="." unique_id=1381117601 instance=ExtResource("15_683ma")]
+position = Vector2(-898, -511)

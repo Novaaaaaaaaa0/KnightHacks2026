@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cdvfhjgjtqg56"]
+
+[ext_resource type="PackedScene" uid="uid://du68r3dcapk6b" path="res://scenes/slime.tscn" id="1_t76o2"]
+[ext_resource type="Texture2D" uid="uid://ckppmsni18ngg" path="res://assets/sprites/Ghost Sprite Sheet.png" id="2_l5lq6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbnym"]
+atlas = ExtResource("2_l5lq6")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_veat2"]
+atlas = ExtResource("2_l5lq6")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mfnq"]
+atlas = ExtResource("2_l5lq6")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv6vd"]
+atlas = ExtResource("2_l5lq6")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv5gc"]
+atlas = ExtResource("2_l5lq6")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wj1r3"]
+atlas = ExtResource("2_l5lq6")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_seks5"]
+atlas = ExtResource("2_l5lq6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pqta"]
+atlas = ExtResource("2_l5lq6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l5lq6"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_bbnym")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_veat2")
+}],
+"loop": 1,
+"name": &"Back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_5mfnq")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_lv6vd")
+}],
+"loop": 1,
+"name": &"Front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_sv5gc")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_wj1r3")
+}],
+"loop": 1,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_seks5")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_4pqta")
+}],
+"loop": 1,
+"name": &"Right",
+"speed": 5.0
+}]
+
+[node name="Ghost" unique_id=1381117601 instance=ExtResource("1_t76o2")]
+speed = 20
+damage = 30
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=2145497591]
+sprite_frames = SubResource("SpriteFrames_l5lq6")
+animation = &"Left"
+frame_progress = 0.0

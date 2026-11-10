@@ -9,9 +9,11 @@ enum{
 @onready var timer = $Timer
 @onready var animation = $AnimatedSprite2D
 
-var health = 150
+@export var health = 150
+@export var speed = 25
+@export var damage = 25
+@export var enemyName = "slime"
 var state = WALKING
-var speed = 25
 var direction = Vector2.RIGHT
 
 func _ready() -> void:

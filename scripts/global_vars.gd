@@ -45,6 +45,13 @@ func _input(event):
 						flowerCollected[2] = true
 				"teleport":
 					if numCollected == 3:
+						var timer: Timer
+						timer = Timer.new()
+						get_tree().current_scene.add_child(timer)
+						timer.wait_time = 1.0
+						timer.one_shot = true
+						timer.start()
+						await timer.timeout
 						load_next_level()
 				"fading_girl":
 					run_dialogue()
