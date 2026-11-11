@@ -11,7 +11,7 @@ signal level_complete
 @onready var numCollected = 0
 @onready var dialogue = preload("res://scenes/dialogue_manager.tscn")
 var dialogue_manager
-
+var active_scene
 var lines: Array[String] = []
 var flowerCollected = [false, false, false] # 0 = red, 1 = green, 2 = blue
 

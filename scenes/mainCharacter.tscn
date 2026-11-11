@@ -25,7 +25,27 @@ region = Rect2(196, 36, 91, 27)
 font = ExtResource("4_nthm3")
 font_size = 25
 
-[node name="mainCharacter" type="CharacterBody2D" unique_id=215440872]
+[sub_resource type="Animation" id="Animation_kwwav"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Death/Control:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03, 0.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x5162"]
+_data = {
+&"death": SubResource("Animation_kwwav")
+}
+
+[node name="mainCharacter" type="CharacterBody2D" unique_id=215440872 groups=["player"]]
 script = ExtResource("1_1iwj0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=705225977]
@@ -50,6 +70,7 @@ visible = false
 script = ExtResource("4_kwwav")
 
 [node name="Control" type="Control" parent="Death" unique_id=1265209783]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -93,6 +114,7 @@ offset_bottom = -345.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(7, 7)
+mouse_default_cursor_shape = 2
 texture_normal = SubResource("AtlasTexture_x5162")
 texture_pressed = SubResource("AtlasTexture_jaax5")
 
@@ -123,6 +145,7 @@ offset_bottom = -591.9999
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(7, 7)
+mouse_default_cursor_shape = 2
 texture_normal = SubResource("AtlasTexture_x5162")
 texture_pressed = SubResource("AtlasTexture_jaax5")
 
@@ -138,6 +161,10 @@ grow_horizontal = 2
 offset_transform_scale = Vector2(7, 7)
 text = "RETRY"
 label_settings = SubResource("LabelSettings_56tk6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2067048228]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_x5162")
 
 [connection signal="playerDied" from="." to="." method="_on_player_died"]
 [connection signal="pressed" from="Death/Control/Quit" to="Death" method="_on_quit_pressed"]

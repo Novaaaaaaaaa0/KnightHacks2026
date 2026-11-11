@@ -108,10 +108,11 @@ position = Vector2(-82, -476)
 texture = ExtResource("13_2kv06")
 
 [node name="Slime" parent="." unique_id=1666948179 instance=ExtResource("14_2kv06")]
-position = Vector2(-811, -449)
+position = Vector2(-868, -751)
 
 [node name="Timer" type="Timer" parent="." unique_id=1168014352]
 one_shot = true
 
 [node name="Ghost" parent="." unique_id=1381117601 instance=ExtResource("15_683ma")]
-position = Vector2(-898, -511)
+use_parent_material = false
+position = Vector2(-93, -420)

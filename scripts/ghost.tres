@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://8frf747q6083"]
+
+[ext_resource type="Script" uid="uid://cxfw3pu610vm" path="res://scripts/base_enemy.gd" id="1_ngbgy"]
+[ext_resource type="Texture2D" uid="uid://ckppmsni18ngg" path="res://assets/sprites/Ghost Sprite Sheet.png" id="2_76tid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2arj"]
+atlas = ExtResource("2_76tid")
+region = Rect2(36, 34, 21, 30)
+
+[resource]
+script = ExtResource("1_ngbgy")
+name = "Ghost"
+texture = SubResource("AtlasTexture_g2arj")
+health = 100
+damage = 25

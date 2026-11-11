@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var health: int = 100
 @onready var gretta_sprite = $CollisionShape2D/AnimatedSprite2D
 @onready var deathScreen = $Death
+@onready var animationPlayer = $AnimationPlayer
 var direction: String = "none"
 
 signal playerDied
@@ -19,6 +20,9 @@ func _physics_process(_delta: float) -> void:
 
 # Most Inefficient animation + movement code in the world
 func _process(_delta) -> void:
+	
+	if(State.current_health <= 0):
+		playerDied.emit()
 	
 	var moving: bool = (Input.is_action_pressed("moveDown") || Input.is_action_pressed("moveUp") || Input.is_action_pressed("moveLeft") || Input.is_action_pressed("moveRight"))
 	
@@ -66,5 +70,12 @@ func _process(_delta) -> void:
 
 
 func _on_player_died() -> void:
-	get_tree().paused = true
+	#get_tree().paused = true
 	deathScreen.visible = true
+	animationPlayer.play("death")
+	await animationPlayer.animation_finished
+	$Death/Control.modulate.a = 1.0
+	get_tree().paused = true
+	# CURRENTLY THE DEATH SCREEN IS NOT VISIBLE AFTER THE ANIMATION
+	# FIX THIS!!!!!!!!!!!!!!!!!!!!!!
+	#deathScreen.visible = true

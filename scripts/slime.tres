@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cyr3jn4pitcqg"]
+
+[ext_resource type="Script" uid="uid://cxfw3pu610vm" path="res://scripts/base_enemy.gd" id="1_gd8qq"]
+[ext_resource type="Texture2D" uid="uid://bom66vvrf4tvw" path="res://assets/sprites/Slime Battle View.png" id="2_tgv27"]
+
+[resource]
+script = ExtResource("1_gd8qq")
+name = "Slime"
+texture = ExtResource("2_tgv27")

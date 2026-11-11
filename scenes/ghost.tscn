@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cdvfhjgjtqg56"]
 
 [ext_resource type="PackedScene" uid="uid://du68r3dcapk6b" path="res://scenes/slime.tscn" id="1_t76o2"]
+[ext_resource type="Resource" uid="uid://8frf747q6083" path="res://scripts/ghost.tres" id="2_bbnym"]
 [ext_resource type="Texture2D" uid="uid://ckppmsni18ngg" path="res://assets/sprites/Ghost Sprite Sheet.png" id="2_l5lq6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bbnym"]
@@ -86,6 +87,7 @@ animations = [{
 speed = 20
 damage = 30
 enemyName = "ghost"
+enemyResource = ExtResource("2_bbnym")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=2145497591]
 sprite_frames = SubResource("SpriteFrames_l5lq6")

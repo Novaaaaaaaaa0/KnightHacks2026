@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://0ao1cxyfnixc"]
 
 [ext_resource type="Texture2D" uid="uid://bom66vvrf4tvw" path="res://assets/sprites/Slime Battle View.png" id="1_dn72j"]
+[ext_resource type="Script" uid="uid://bsgdjsjnmnh2w" path="res://scenes/battle.gd" id="1_p1qf1"]
 [ext_resource type="FontFile" uid="uid://b53lpgo8eeivr" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="1_th188"]
+[ext_resource type="Resource" uid="uid://cyr3jn4pitcqg" path="res://scripts/slime.tres" id="2_a12nh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckn67"]
 bg_color = Color(0.85033363, 0, 0.16339904, 1)
@@ -61,7 +63,105 @@ border_color = Color(0, 0, 0, 1)
 font = ExtResource("1_th188")
 font_size = 100
 
+[sub_resource type="Animation" id="Animation_a12nh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyContainer/Enemy:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lpir7"]
+resource_name = "enemy_damaged"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyContainer/Enemy:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.53333336, -0.2666667, -5.9604645e-08, 0.23333329, 0.5, 0.76666665, 1.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f4pi3"]
+resource_name = "enemy_died"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyContainer/Enemy:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.92),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.99999994), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4k1nj"]
+resource_name = "mini_shake"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.27, 0.38, 0.5, 0.63, 0.68, 0.8, 0.86, 0.94),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-30, 10), Vector2(10, -10), Vector2(50, 20), Vector2(5, -10), Vector2(5, -10), Vector2(30, -15), Vector2(-30, -5), Vector2(-10, 12), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6vh42"]
+resource_name = "shake"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.27, 0.38, 0.5, 0.63, 0.68, 0.8, 0.86, 0.94),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-58.999996, 27), Vector2(36, -34.000004), Vector2(144, 50), Vector2(25, -24), Vector2(10, -26), Vector2(61, -38), Vector2(-61, -16), Vector2(-27, 28), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6vh42"]
+_data = {
+&"RESET": SubResource("Animation_a12nh"),
+&"enemy_damaged": SubResource("Animation_lpir7"),
+&"enemy_died": SubResource("Animation_f4pi3"),
+&"mini_shake": SubResource("Animation_4k1nj"),
+&"shake": SubResource("Animation_6vh42")
+}
+
 [node name="Battle" type="Control" unique_id=446483073]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,12 +171,18 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
+script = ExtResource("1_p1qf1")
+enemy = ExtResource("2_a12nh")
 
 [node name="Background" type="ColorRect" parent="." unique_id=694764091]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -193.0
+offset_right = 196.0
+offset_bottom = 210.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.06666667, 0.07058824, 0.07058824, 1)
@@ -239,7 +345,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_6rap8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4lsdt")
 text = "Run"
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=305378821]
+[node name="Textbox" type="MarginContainer" parent="." unique_id=305378821]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -253,11 +359,11 @@ theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="Textbox" type="Panel" parent="MarginContainer" unique_id=572274964]
+[node name="Textbox" type="Panel" parent="Textbox" unique_id=572274964]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_sbnjo")
 
-[node name="Label" type="Label" parent="MarginContainer/Textbox" unique_id=1895261594]
+[node name="Label" type="Label" parent="Textbox/Textbox" unique_id=1895261594]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -270,3 +376,14 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "A SLIME appears!"
 label_settings = SubResource("LabelSettings_vkkk3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=332984114]
+libraries/ = SubResource("AnimationLibrary_6vh42")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=188914531]
+anchor_mode = 0
+
+[connection signal="endOfBattle" from="." to="." method="_on_end_of_battle"]
+[connection signal="pressed" from="ActionsPanel/MarginContainer/Actions/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="ActionsPanel/MarginContainer/Actions/Defeend" to="." method="_on_defeend_pressed"]
+[connection signal="pressed" from="ActionsPanel/MarginContainer/Actions/Run" to="." method="_on_run_pressed"]
