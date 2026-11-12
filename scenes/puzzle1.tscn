@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://cxjsqhe063sxs" path="res://assets/sprites/house with shadow smaller.png" id="13_2kv06"]
 [ext_resource type="PackedScene" uid="uid://b0e3u7cjfyamu" path="res://scenes/pause_gui.tscn" id="13_lfoye"]
 [ext_resource type="PackedScene" uid="uid://du68r3dcapk6b" path="res://scenes/slime.tscn" id="14_2kv06"]
-[ext_resource type="PackedScene" uid="uid://cdvfhjgjtqg56" path="res://scenes/ghost.tscn" id="15_683ma"]
 [ext_resource type="AudioStream" uid="uid://dejeukbgffmu8" path="res://assets/Audio/To Her.mp3" id="16_shtpt"]
 
 [node name="Puzzles" type="Node2D" unique_id=378654457]
@@ -111,12 +110,23 @@ texture = ExtResource("13_2kv06")
 [node name="Slime" parent="." unique_id=1666948179 instance=ExtResource("14_2kv06")]
 position = Vector2(-868, -751)
 
+[node name="Slime2" parent="." unique_id=1381117601 instance=ExtResource("14_2kv06")]
+position = Vector2(-148, -839)
+
+[node name="Slime3" parent="." unique_id=1120721537 instance=ExtResource("14_2kv06")]
+position = Vector2(-673, 578)
+
+[node name="Slime4" parent="." unique_id=126494689 instance=ExtResource("14_2kv06")]
+position = Vector2(164, 597)
+
+[node name="Slime5" parent="." unique_id=944651143 instance=ExtResource("14_2kv06")]
+position = Vector2(752, 475)
+
+[node name="Slime6" parent="." unique_id=1338366475 instance=ExtResource("14_2kv06")]
+position = Vector2(700, -773)
+
 [node name="Timer" type="Timer" parent="." unique_id=1168014352]
 one_shot = true
-
-[node name="Ghost" parent="." unique_id=1381117601 instance=ExtResource("15_683ma")]
-use_parent_material = false
-position = Vector2(-93, -420)
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1297354862]
 stream = ExtResource("16_shtpt")

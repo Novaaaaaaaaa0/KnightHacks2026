@@ -6631,16 +6631,16 @@ tile_map_data = PackedByteArray("AAAOAAoAAAARABsAAAAOAAsAAAARABwAAAAPAAoAAAASABs
 tile_set = SubResource("TileSet_riorx")
 
 [node name="leftLimit" type="Marker2D" parent="." unique_id=52246165]
-position = Vector2(-486, 36)
+position = Vector2(-385, 38)
 
 [node name="topLimit" type="Marker2D" parent="." unique_id=328899246]
-position = Vector2(-319, -529)
+position = Vector2(72, -495)
 
 [node name="rightLimit" type="Marker2D" parent="." unique_id=1954975043]
-position = Vector2(527, -344)
+position = Vector2(625, -325)
 
 [node name="bottomLimit" type="Marker2D" parent="." unique_id=838416913]
-position = Vector2(295, 470)
+position = Vector2(293, 495)
 
 [node name="invisible boundaries" type="StaticBody2D" parent="." unique_id=1106336958]
 position = Vector2(96, 17)

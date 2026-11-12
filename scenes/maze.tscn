@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://1k48qodc80nm" path="res://assets/sprites/Green Flower.png" id="10_hipra"]
 [ext_resource type="Texture2D" uid="uid://bmryrk8lv5u71" path="res://assets/sprites/Blue flower.png" id="11_qhcyp"]
 [ext_resource type="PackedScene" uid="uid://b0e3u7cjfyamu" path="res://scenes/pause_gui.tscn" id="12_tmhqj"]
+[ext_resource type="PackedScene" uid="uid://cdvfhjgjtqg56" path="res://scenes/ghost.tscn" id="13_hipra"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1nuxl"]
 texture = ExtResource("1_fgl6e")
@@ -9151,3 +9152,30 @@ position = Vector2(-758, -6)
 
 [node name="PauseGUI" parent="." unique_id=1942708293 instance=ExtResource("12_tmhqj")]
 visible = false
+
+[node name="Ghost" parent="." unique_id=1381117601 instance=ExtResource("13_hipra")]
+position = Vector2(-679, -901)
+
+[node name="Ghost2" parent="." unique_id=2007800937 instance=ExtResource("13_hipra")]
+position = Vector2(-175, -770)
+
+[node name="Ghost3" parent="." unique_id=1033678654 instance=ExtResource("13_hipra")]
+position = Vector2(761, -643)
+
+[node name="Ghost4" parent="." unique_id=859737829 instance=ExtResource("13_hipra")]
+position = Vector2(720, -902)
+
+[node name="Ghost5" parent="." unique_id=781192107 instance=ExtResource("13_hipra")]
+position = Vector2(739, -14)
+
+[node name="Ghost6" parent="." unique_id=1177469339 instance=ExtResource("13_hipra")]
+position = Vector2(-543, -381)
+
+[node name="Ghost7" parent="." unique_id=388485086 instance=ExtResource("13_hipra")]
+position = Vector2(-165, -188)
+
+[node name="Ghost8" parent="." unique_id=1139490787 instance=ExtResource("13_hipra")]
+position = Vector2(287, -491)
+
+[node name="Ghost9" parent="." unique_id=1368138261 instance=ExtResource("13_hipra")]
+position = Vector2(-196, -977)

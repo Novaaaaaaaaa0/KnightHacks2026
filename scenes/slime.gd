@@ -16,6 +16,7 @@ enum{
 @export var damage = 25
 @export var enemyName = "slime"
 @export var enemyResource: Resource = null
+var battle_started = false
 var state = WALKING
 var direction = Vector2.RIGHT
 
@@ -64,6 +65,8 @@ func start_battle():
 	battle_instance.playerDied.connect(_on_player_died)
 	
 	var tree = get_tree()
+	if(tree == null):
+		return
 	var old_scene = tree.current_scene
 	GlobalVars.active_scene = old_scene
 	
@@ -76,12 +79,18 @@ func start_battle():
 	#get_tree().change_scene_to_file("res://scenes/battle.tscn")
 
 func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
+	if battle_started == true:
+		return
+	
 	if body.is_in_group("player"):
+		battle_started = true
+		$Area2D.set_deferred("monitoring", false)
+		
 		print("Collided with player!")
 		animationPlayer.play("battle")
 		await animationPlayer.animation_finished
 		await get_tree().create_timer(0.25).timeout
-		start_battle()
+		call_deferred("start_battle")
 
 func _on_enemy_died():
 	queue_free()
