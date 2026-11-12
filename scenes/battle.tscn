@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://bsgdjsjnmnh2w" path="res://scenes/battle.gd" id="1_p1qf1"]
 [ext_resource type="FontFile" uid="uid://b53lpgo8eeivr" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="1_th188"]
 [ext_resource type="Resource" uid="uid://cyr3jn4pitcqg" path="res://scripts/slime.tres" id="2_a12nh"]
+[ext_resource type="AudioStream" uid="uid://bdm4w3du77gf1" path="res://assets/Audio/battle!.wav" id="5_lpir7"]
+[ext_resource type="AudioStream" uid="uid://632t6i2fs6fr" path="res://assets/Audio/playerDied.wav" id="6_4k1nj"]
+[ext_resource type="AudioStream" uid="uid://7ku2vijccerh" path="res://assets/Audio/enemyDied.wav" id="7_f4pi3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckn67"]
 bg_color = Color(0.85033363, 0, 0.16339904, 1)
@@ -382,6 +385,16 @@ libraries/ = SubResource("AnimationLibrary_6vh42")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=188914531]
 anchor_mode = 0
+
+[node name="battleMusic" type="AudioStreamPlayer" parent="." unique_id=1240560109]
+stream = ExtResource("5_lpir7")
+autoplay = true
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1594976910]
+stream = ExtResource("6_4k1nj")
+
+[node name="WinSound" type="AudioStreamPlayer" parent="." unique_id=1914368211]
+stream = ExtResource("7_f4pi3")
 
 [connection signal="endOfBattle" from="." to="." method="_on_end_of_battle"]
 [connection signal="pressed" from="ActionsPanel/MarginContainer/Actions/Attack" to="." method="_on_attack_pressed"]

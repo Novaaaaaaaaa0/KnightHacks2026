@@ -9,6 +9,9 @@ extends Control
 @onready var enemyProgressBar = $EnemyContainer/ProgressBar
 @onready var enemyTexture = $EnemyContainer/Enemy
 @onready var animationPlayer = $AnimationPlayer
+@onready var music = $battleMusic
+@onready var playedLostSound = $DeathSound
+@onready var playedWonSound = $WinSound
 
 var isDefending = false
 var currentPlayerHealth = 0
@@ -78,6 +81,8 @@ func enemy_turn():
 			set_health(playerProgressBar, currentPlayerHealth, State.max_health)
 			
 			if(currentPlayerHealth <= 0):
+				music.stop()
+				playedLostSound.play()
 				display_text("You died...")
 				await textboxClosed
 				
@@ -134,6 +139,8 @@ func _on_attack_pressed() -> void:
 		set_health(enemyProgressBar, currentEnemyHealth, enemy.health)
 		
 		if(currentEnemyHealth == 0):
+			music.stop()
+			playedWonSound.play()
 			display_text("The enemy was defeated!")
 			await textboxClosed
 			
