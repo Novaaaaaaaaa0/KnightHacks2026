@@ -131,18 +131,3 @@ one_shot = true
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1297354862]
 stream = ExtResource("16_shtpt")
 autoplay = true
-
-[node name="Slime7" parent="." unique_id=1498838982 instance=ExtResource("14_2kv06")]
-position = Vector2(-771, -401)
-
-[node name="Slime8" parent="." unique_id=1543631412 instance=ExtResource("14_2kv06")]
-position = Vector2(-777, -433)
-
-[node name="Slime9" parent="." unique_id=2145217038 instance=ExtResource("14_2kv06")]
-position = Vector2(-745, -435)
-
-[node name="Slime10" parent="." unique_id=1967139775 instance=ExtResource("14_2kv06")]
-position = Vector2(-789, -462)
-
-[node name="Slime11" parent="." unique_id=376930937 instance=ExtResource("14_2kv06")]
-position = Vector2(-823, -367)
