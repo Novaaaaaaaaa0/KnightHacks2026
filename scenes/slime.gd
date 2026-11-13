@@ -93,6 +93,10 @@ func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
 		call_deferred("start_battle")
 
 func _on_enemy_died():
+	State.enemiesDefeated += 1
+	if(State.enemiesDefeated % 5 == 0):
+		State.level_up()
+		print("The player leveled up!")
 	queue_free()
 
 func _on_player_died():

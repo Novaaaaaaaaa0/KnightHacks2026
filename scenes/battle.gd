@@ -24,6 +24,8 @@ signal playerDied
 signal enemyDied
 
 func _ready() -> void:
+	State.levelUp.connect(_on_level_up)
+	
 	actionsPanel.hide()
 	if(activeBattle == true):
 		PauseGui.isPauseable = false
@@ -55,6 +57,9 @@ func set_health(progressBar, health, maxHealth):
 	progressBar.max_value = maxHealth
 	progressBar.get_node("Label").text = "HP:%d/%d" % [health, maxHealth]
 	pass
+	
+func _on_level_up():
+	set_health(playerProgressBar, State.current_health, State.max_health)
 	
 func enemy_turn():
 	actionsPanel.hide()
