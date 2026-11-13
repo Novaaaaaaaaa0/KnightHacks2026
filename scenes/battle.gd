@@ -17,6 +17,7 @@ var isDefending = false
 var currentPlayerHealth = 0
 var currentEnemyHealth = 0
 var activeBattle = false
+var numHeals = 3
 
 signal textboxClosed
 signal endOfBattle
@@ -178,6 +179,8 @@ func _on_defeend_pressed() -> void:
 
 
 func _on_end_of_battle() -> void:
+	State.current_health = currentPlayerHealth
+	
 	var tree = get_tree()
 	var battle_scene = tree.current_scene
 	var old_scene = GlobalVars.active_scene
@@ -191,3 +194,27 @@ func _on_end_of_battle() -> void:
 	# MUST FIX!!!!!!!!!!!!!!!!!!!!
 	#get_tree().quit()
 	pass
+
+
+func _on_heal_pressed() -> void:
+	actionsPanel.hide()
+	
+	if(numHeals <= 0):
+		display_text("You have no heals left!")
+		await textboxClosed
+	elif(currentPlayerHealth < State.max_health and numHeals > 0):
+		numHeals -= 1
+		var newHealth = currentPlayerHealth + 30
+		if(newHealth > State.max_health):
+			currentPlayerHealth = State.max_health
+		else:
+			currentPlayerHealth = newHealth
+		display_text("You healed! Heals remaining: %d" % numHeals)
+		await textboxClosed
+		set_health(playerProgressBar, currentPlayerHealth, State.max_health)
+	elif(currentPlayerHealth >= State.max_health):
+		display_text("You're already at max health!")
+		await textboxClosed
+		
+	await get_tree().create_timer(0.25).timeout
+	enemy_turn()

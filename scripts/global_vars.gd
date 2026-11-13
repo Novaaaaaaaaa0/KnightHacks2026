@@ -104,7 +104,7 @@ func run_dialogue():
 			if(numCollected != 3):
 				lines = get_lines("res://scripts/Dialogue/lvl2start.txt")
 			else:
-				pass
+				lines = get_lines("res://scripts/Dialogue/lvl2end.txt")
 		3:
 			if(numCollected != 3):
 				pass

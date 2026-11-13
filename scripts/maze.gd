@@ -3,6 +3,8 @@ extends Node2D
 var colorMaterial = material as ShaderMaterial
 
 @onready var endOfLevel = $EndOfLevel
+@onready var fgEndPos = $fadingGirlNewPos
+@onready var fadingGirl = $FadingGirl
 
 
 # Sets camera limits based on level limits
@@ -22,4 +24,5 @@ func _ready() -> void:
 func _on_level_complete()->void: 
 	material = null
 	endOfLevel.activated()
+	fadingGirl.global_position = fgEndPos.global_position
 	pass

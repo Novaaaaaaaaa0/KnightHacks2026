@@ -6,8 +6,9 @@
 [ext_resource type="FontFile" uid="uid://b53lpgo8eeivr" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="4_nthm3"]
 [ext_resource type="Texture2D" uid="uid://bmidlci445roe" path="res://assets/RetroPaid/RetroPaid/retro.png" id="5_kwwav"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_trt31"]
-size = Vector2(13, 20)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nthm3"]
+radius = 7.5
+height = 27.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_ckn67"]
 font = ExtResource("4_nthm3")
@@ -49,11 +50,11 @@ _data = {
 script = ExtResource("1_1iwj0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=705225977]
-position = Vector2(-2.5, 1)
-shape = SubResource("RectangleShape2D_trt31")
+position = Vector2(-1.5, 2.5)
+shape = SubResource("CapsuleShape2D_nthm3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=1481908244]
-position = Vector2(1.5, 0)
+position = Vector2(0.25, 0.5)
 sprite_frames = ExtResource("3_1mvck")
 animation = &"Front Interact"
 
