@@ -6688,5 +6688,6 @@ ItemTexture = ExtResource("11_esdpv")
 position = Vector2(8, 15)
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1136630911]
+process_mode = 3
 stream = SubResource("AudioStreamMP3_vsrpk")
 autoplay = true

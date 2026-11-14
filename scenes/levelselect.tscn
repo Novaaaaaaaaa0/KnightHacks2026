@@ -14,6 +14,7 @@ default_font_size = 150
 default_font_size = 100
 
 [node name="levelSelect" type="Node2D" unique_id=290629519]
+script = ExtResource("4_6rap8")
 
 [node name="Control" type="Control" parent="." unique_id=344473850]
 layout_mode = 3
@@ -114,7 +115,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme = SubResource("Theme_ckn67")
-script = ExtResource("4_6rap8")
 
 [node name="Level1" type="Button" parent="Control/Buttons" unique_id=114938958]
 layout_mode = 0
@@ -132,7 +132,7 @@ layout_mode = 0
 offset_left = 182.0
 offset_top = 533.0
 offset_right = 813.0
-offset_bottom = 679.0
+offset_bottom = 691.0
 mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("4_aaiik")
 theme_override_font_sizes/font_size = 150
@@ -160,3 +160,8 @@ theme_override_fonts/font = ExtResource("4_aaiik")
 theme_override_font_sizes/font_size = 150
 text = "Back"
 script = ExtResource("5_aaiik")
+
+[connection signal="pressed" from="Control/Buttons/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Control/Buttons/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Control/Buttons/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Control/Buttons/Back" to="." method="_on_back_pressed"]

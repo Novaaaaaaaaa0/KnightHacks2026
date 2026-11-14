@@ -76,7 +76,7 @@ func enemy_turn():
 		await textboxClosed
 		actionsPanel.show()
 	else:
-		var success = [0,1,2,3,4].pick_random()
+		var success = [0,1,2,3].pick_random()
 		if(success > 0):
 			animationPlayer.play("shake")
 			await animationPlayer.animation_finished
@@ -134,7 +134,7 @@ func _on_attack_pressed() -> void:
 	display_text("You wack the enemy with your paintbrush!")
 	await textboxClosed
 	
-	var success = [0,1,2].pick_random()
+	var success = [0,1,2,3].pick_random()
 	if(success > 0):
 		animationPlayer.play("enemy_damaged")
 		await animationPlayer.animation_finished
@@ -179,7 +179,7 @@ func _on_defeend_pressed() -> void:
 
 
 func _on_end_of_battle() -> void:
-	State.current_health = currentPlayerHealth
+	#State.current_health = currentPlayerHealth
 	
 	var tree = get_tree()
 	var battle_scene = tree.current_scene

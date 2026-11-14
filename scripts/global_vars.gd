@@ -77,12 +77,12 @@ func load_next_level():
 		match currentLevel:
 			1:
 				CompletionManager.level1Complete.emit(1)
-				get_tree().change_scene_to_file("res://scenes/maze.tscn")
-				await get_tree().process_frame
+				LevelSwitch.change_level("res://scenes/maze.tscn")
+				
 			2:
 				CompletionManager.level2Complete.emit(2)
-				get_tree().change_scene_to_file("res://scenes/fight_level.tscn")
-				await get_tree().process_frame
+				LevelSwitch.change_level("res://scenes/fight_level.tscn")
+				
 			3:
 				CompletionManager.level3Complete.emit(3)
 				await get_tree().process_frame

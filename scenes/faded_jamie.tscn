@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://bjob2i6ipolw"]
+
+[ext_resource type="PackedScene" uid="uid://du68r3dcapk6b" path="res://scenes/slime.tscn" id="1_5xmk8"]
+[ext_resource type="Resource" uid="uid://bydx3yais6lt6" path="res://scripts/faded_jamie.tres" id="2_65vyv"]
+[ext_resource type="Texture2D" uid="uid://cng2xmtayehdf" path="res://assets/sprites/Faded Villagers.png" id="2_x6oki"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65vyv"]
+atlas = ExtResource("2_x6oki")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf6tu"]
+atlas = ExtResource("2_x6oki")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awnhq"]
+atlas = ExtResource("2_x6oki")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35yb5"]
+atlas = ExtResource("2_x6oki")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3v6u"]
+atlas = ExtResource("2_x6oki")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrrxc"]
+atlas = ExtResource("2_x6oki")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3b4s"]
+atlas = ExtResource("2_x6oki")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7prg"]
+atlas = ExtResource("2_x6oki")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ckn67"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_65vyv")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_hf6tu")
+}],
+"loop": 1,
+"name": &"Back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_awnhq")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_35yb5")
+}],
+"loop": 1,
+"name": &"Front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_i3v6u")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_hrrxc")
+}],
+"loop": 1,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_k3b4s")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_b7prg")
+}],
+"loop": 1,
+"name": &"Right",
+"speed": 5.0
+}]
+
+[node name="FadedJamie" unique_id=1381117601 instance=ExtResource("1_5xmk8")]
+enemyName = "jamie"
+enemyResource = ExtResource("2_65vyv")
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=2145497591]
+sprite_frames = SubResource("SpriteFrames_ckn67")
+animation = &"Left"
+frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1838708651]
+position = Vector2(-2, 4)
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1089811854) index="0" unique_id=471519755]
+position = Vector2(-1, -1)

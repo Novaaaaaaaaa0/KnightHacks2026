@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://d1nm22e03ycoq"]
+
+[ext_resource type="Script" uid="uid://bf7yd1pwluu3j" path="res://scenes/loading_scene.gd" id="1_a0egu"]
+[ext_resource type="Texture2D" uid="uid://bmidlci445roe" path="res://assets/RetroPaid/RetroPaid/retro.png" id="1_smnf2"]
+[ext_resource type="FontFile" uid="uid://b53lpgo8eeivr" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="2_a0egu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckn67"]
+atlas = ExtResource("1_smnf2")
+region = Rect2(15, 89, 68, 94)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ckn67"]
+font = ExtResource("2_a0egu")
+font_size = 150
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y2lm"]
+atlas = ExtResource("1_smnf2")
+region = Rect2(26, 5, 52, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkkk3"]
+atlas = ExtResource("1_smnf2")
+region = Rect2(336, 334, 48, 3)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4y2lm"]
+font = ExtResource("2_a0egu")
+font_size = 70
+
+[node name="loadingScene" type="Control" unique_id=186140422 node_paths=PackedStringArray("loading_bar", "percentage_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a0egu")
+loading_bar = NodePath("VBoxContainer/ProgressBar")
+percentage_label = NodePath("VBoxContainer/ProgressBar/percentageLabel")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1896699837]
+layout_mode = 0
+offset_right = 1932.0
+offset_bottom = 1078.0
+texture = SubResource("AtlasTexture_ckn67")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=358355761]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="loading" type="Label" parent="VBoxContainer" unique_id=1332238596]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Loading..."
+label_settings = SubResource("LabelSettings_ckn67")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="VBoxContainer" unique_id=816287336]
+custom_minimum_size = Vector2(1700, 70)
+custom_maximum_size = Vector2(1800, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.0
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_4y2lm")
+texture_progress = SubResource("AtlasTexture_vkkk3")
+
+[node name="percentageLabel" type="Label" parent="VBoxContainer/ProgressBar" unique_id=1362173904]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0%"
+label_settings = SubResource("LabelSettings_4y2lm")

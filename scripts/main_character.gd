@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var gretta_sprite = $CollisionShape2D/AnimatedSprite2D
 @onready var deathScreen = $Death
 @onready var animationPlayer = $AnimationPlayer
+@onready var step = $step
 var direction: String = "none"
 
 signal playerDied
@@ -37,9 +38,9 @@ func _process(_delta) -> void:
 		elif((gretta_sprite.animation == ("Back Walking")) || (gretta_sprite.animation == ("Back Standing"))):
 				gretta_sprite.play("Back Interact")
 				
-	
 	elif moving:
 		#moving down
+		step.stream
 		if Input.is_action_pressed("moveDown"):
 			gretta_sprite.play("Front Walking")	
 			direction = "down"
@@ -57,6 +58,7 @@ func _process(_delta) -> void:
 			direction = "right"
 	
 	else:
+		step.stream_paused
 		match direction:
 			"up":
 				gretta_sprite.play("Back Standing")

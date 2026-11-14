@@ -2,13 +2,19 @@ extends CanvasLayer
 
 @export var isPauseable = true
 
-func _process(delta: float) -> void:
+func _ready() -> void:
+	visible = false
+
+func _input(event: InputEvent) -> void:
 	pause()
 
 func pause():
-	if Input.is_action_just_pressed("pause") and isPauseable:
+	if Input.is_action_just_pressed("pause"): #maybe need to add and if isPauseable
+		if get_tree().paused == false:
+			get_tree().paused = true
+		else:
+			get_tree().paused = false	
 		visible = !visible
-		get_tree().paused = !get_tree().paused
 
 func _on_quit_pressed() -> void:
 	get_tree().paused = false

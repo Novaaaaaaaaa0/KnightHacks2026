@@ -23,7 +23,8 @@ GlobalVars="*uid://c837u0txfndxw"
 CompletionManager="*uid://b8vp135wyr0su"
 DialogueManager="*uid://t0bgtdae615"
 State="*uid://se1ah21s3sjy"
-PauseGui="*uid://mvex53j5agxn"
+PauseGui="*uid://b0e3u7cjfyamu"
+LevelSwitch="*uid://vi58h22vnblr"
 
 [display]
 
