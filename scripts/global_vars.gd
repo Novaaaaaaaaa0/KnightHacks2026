@@ -17,6 +17,7 @@ var flowerCollected = [false, false, false] # 0 = red, 1 = green, 2 = blue
 
 func _ready() -> void:
 	dialogue_manager = dialogue.instantiate()
+	dialogue_manager.is_dialogue_active = false
 	get_tree().root.call_deferred("add_child",dialogue_manager)
 	save.connect(_on_save)
 
@@ -54,10 +55,13 @@ func _input(event):
 						await timer.timeout
 						load_next_level()
 				"fading_girl":
+					#dialogue_manager.is_dialogue_active = true
+					#get_viewport().set_input_as_handled()
+					print("Interacted with fading girl")
 					run_dialogue()
 					
 			check_level_completion()
-		elif Input.is_action_pressed("Interaction"):
+		elif Input.is_action_just_pressed("Interaction"):
 			print("Nothing to interact with.")
 				
 func _on_save():

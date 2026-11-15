@@ -9,9 +9,14 @@ var is_dialogue_active = false
 
 func _ready() -> void:
 	dialogue_box.visible = false
+	is_dialogue_active = false
 
 func start_dialogue(lines: Array[String]):
+	print_stack()
 	if is_inside_tree():
+		if is_dialogue_active:
+			return
+			
 		get_tree().paused = true
 	
 		is_dialogue_active = true
@@ -24,7 +29,7 @@ func start_dialogue(lines: Array[String]):
 		print("ERROR: Not in tree!")
 	
 func advance_dialogue():
-	if current_line < dialogue_lines.size() - 1:
+	if current_line < dialogue_lines.size() - 2:
 		current_line += 1
 		dialogue_text.text = dialogue_lines[current_line]
 	else:
@@ -33,8 +38,8 @@ func advance_dialogue():
 		dialogue_box.visible = false
 	
 func _input(event):
-	if not is_dialogue_active:
+	if is_dialogue_active == false:
 		return
-	if Input.is_action_just_pressed("ui_accept"):
+	elif Input.is_action_just_pressed("ui_accept"):
 		advance_dialogue()
 	

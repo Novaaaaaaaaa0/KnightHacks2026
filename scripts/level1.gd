@@ -12,6 +12,8 @@ func _ready() -> void:
 	gretta.play("Front Standing")
 	GlobalVars.level_complete.connect(_on_level_complete)
 	GlobalVars.currentLevel = 1
+	GlobalVars.currentInteraction = "none"
+	GlobalVars.isInteractable = false
 	
 	var cam = $mainCharacter/Camera2D
 	cam.set_limit(SIDE_LEFT, int($leftLimit.position.x))

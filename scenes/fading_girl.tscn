@@ -23,7 +23,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8ulkk"]
-radius = 19.0
+radius = 16.0
 
 [node name="FadingGirl" type="Node2D" unique_id=1942408733]
 script = ExtResource("1_oopgg")
