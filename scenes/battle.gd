@@ -204,7 +204,7 @@ func _on_heal_pressed() -> void:
 		await textboxClosed
 	elif(currentPlayerHealth < State.max_health and numHeals > 0):
 		numHeals -= 1
-		var newHealth = currentPlayerHealth + 30
+		var newHealth = currentPlayerHealth + 35 + State.healLvlUp
 		if(newHealth > State.max_health):
 			currentPlayerHealth = State.max_health
 		else:

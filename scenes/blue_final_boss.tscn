@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://da8ma8ie23x8n"]
+
+[ext_resource type="PackedScene" uid="uid://3uv3v55g8lyn" path="res://scenes/red_final_boss.tscn" id="1_na2nx"]
+[ext_resource type="Resource" uid="uid://c381fods8bv4v" path="res://scenes/blue_final_boss.tres" id="2_idy4q"]
+[ext_resource type="Texture2D" uid="uid://ctbfs08aglni0" path="res://assets/sprites/Final Bosses.png" id="2_ppxse"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idy4q"]
+atlas = ExtResource("2_ppxse")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psm6k"]
+atlas = ExtResource("2_ppxse")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6lar7"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_idy4q")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_psm6k")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BlueFinalBoss" unique_id=1381117601 instance=ExtResource("1_na2nx")]
+enemyName = "Blue Final Boss"
+enemyResource = ExtResource("2_idy4q")
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=2145497591]
+sprite_frames = SubResource("SpriteFrames_6lar7")
+frame_progress = 0.0

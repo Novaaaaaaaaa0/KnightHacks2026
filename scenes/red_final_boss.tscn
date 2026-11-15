@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://3uv3v55g8lyn"]
+
+[ext_resource type="Script" uid="uid://50cna2qqkor7" path="res://final_boss.gd" id="1_tnej2"]
+[ext_resource type="Texture2D" uid="uid://ctbfs08aglni0" path="res://assets/sprites/Final Bosses.png" id="2_e6d70"]
+[ext_resource type="Resource" uid="uid://diqklk6qrfc77" path="res://scenes/red_final_boss.tres" id="2_pwo2h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwo2h"]
+atlas = ExtResource("2_e6d70")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo2xm"]
+atlas = ExtResource("2_e6d70")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ckn67"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_pwo2h")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_lo2xm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ckn67"]
+radius = 6.0827627
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4y2lm"]
+radius = 58.00862
+
+[sub_resource type="Animation" id="Animation_n6pvg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pjw23"]
+resource_name = "battle"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.36666667, 0.61),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.4571533, 1.456531), Vector2(1.2769266, 1.2218996), Vector2(2.051099, 1.9443152)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2npkn"]
+_data = {
+&"RESET": SubResource("Animation_n6pvg"),
+&"battle": SubResource("Animation_pjw23")
+}
+
+[node name="RedFinalBoss" type="CharacterBody2D" unique_id=1381117601 groups=["enemy"]]
+use_parent_material = true
+script = ExtResource("1_tnej2")
+enemyResource = ExtResource("2_pwo2h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2145497591]
+use_parent_material = true
+sprite_frames = SubResource("SpriteFrames_ckn67")
+frame_progress = 0.3158268
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838708651]
+position = Vector2(-1, 6)
+shape = SubResource("CircleShape2D_ckn67")
+
+[node name="Timer" type="Timer" parent="." unique_id=336850065]
+wait_time = 1.5
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1089811854]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=471519755]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_4y2lm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=34310901]
+libraries/ = SubResource("AnimationLibrary_2npkn")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

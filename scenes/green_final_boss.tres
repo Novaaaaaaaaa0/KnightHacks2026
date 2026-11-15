@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://c36boh5c73dn3"]
+
+[ext_resource type="Script" uid="uid://cxfw3pu610vm" path="res://scripts/base_enemy.gd" id="1_pfika"]
+[ext_resource type="Texture2D" uid="uid://ctbfs08aglni0" path="res://assets/sprites/Final Bosses.png" id="2_sv26c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7k8i2"]
+atlas = ExtResource("2_sv26c")
+region = Rect2(32, 0, 30, 33)
+
+[resource]
+script = ExtResource("1_pfika")
+name = "Fully Faded Villager"
+texture = SubResource("AtlasTexture_7k8i2")
+health = 200
+damage = 30

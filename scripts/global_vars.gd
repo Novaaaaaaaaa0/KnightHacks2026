@@ -85,7 +85,7 @@ func load_next_level():
 				
 			3:
 				CompletionManager.level3Complete.emit(3)
-				await get_tree().process_frame
+				LevelSwitch.change_level("res://scenes/credits.tscn")
 				pass
 
 func _deferred_dialogue():

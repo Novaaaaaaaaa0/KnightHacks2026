@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://1k48qodc80nm" path="res://assets/sprites/Green Flower.png" id="10_mi3o1"]
 [ext_resource type="Texture2D" uid="uid://bmryrk8lv5u71" path="res://assets/sprites/Blue flower.png" id="11_esdpv"]
 [ext_resource type="PackedScene" uid="uid://0nah6nckoxm1" path="res://scenes/fading_girl.tscn" id="12_vsrpk"]
+[ext_resource type="PackedScene" uid="uid://3uv3v55g8lyn" path="res://scenes/red_final_boss.tscn" id="13_mi3o1"]
+[ext_resource type="PackedScene" uid="uid://xlrsl3pr3b83" path="res://scenes/green_final_boss.tscn" id="14_esdpv"]
+[ext_resource type="PackedScene" uid="uid://da8ma8ie23x8n" path="res://scenes/blue_final_boss.tscn" id="15_kilwt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hfdf0"]
 texture = ExtResource("1_mhdqy")
@@ -6845,3 +6848,14 @@ position = Vector2(8, 15)
 process_mode = 3
 stream = SubResource("AudioStreamMP3_vsrpk")
 autoplay = true
+
+[node name="RedFinalBoss" parent="." unique_id=1381117601 instance=ExtResource("13_mi3o1")]
+position = Vector2(-314, -425)
+
+[node name="GreenFinalBoss" parent="." unique_id=357331036 instance=ExtResource("14_esdpv")]
+position = Vector2(-317, 401)
+enemyResource = null
+
+[node name="BlueFinalBoss" parent="." unique_id=367606543 instance=ExtResource("15_kilwt")]
+position = Vector2(539, 399)
+enemyResource = null
