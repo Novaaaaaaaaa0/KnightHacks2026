@@ -24,8 +24,8 @@ func _ready() -> void:
 func _input(event):
 	var activeScene = get_tree().current_scene
 	
-	if (get_tree().current_scene.scene_file_path == 'res://scenes/titlescreen.tscn'):
-		pass
+	if (get_tree().current_scene.scene_file_path == "res://scenes/titlescreen.tscn"):
+		return
 	if activeScene != null:	
 		if isInteractable == true && Input.is_action_just_pressed("Interaction"):
 			match currentInteraction:
