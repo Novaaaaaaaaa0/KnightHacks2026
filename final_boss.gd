@@ -8,9 +8,10 @@ extends CharacterBody2D
 @export var enemyResource: Resource = null
 var battle_started = false
 var direction = Vector2.RIGHT
+var battle_instance
 
 func start_battle():
-	var battle_instance = battle.instantiate()
+	battle_instance = battle.instantiate()
 	battle_instance.get_resource(enemyResource)
 	battle_instance.enemyDied.connect(_on_enemy_died)
 	battle_instance.playerDied.connect(_on_player_died)
@@ -52,3 +53,5 @@ func _on_enemy_died():
 
 func _on_player_died():
 	queue_free()
+
+	

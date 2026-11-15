@@ -99,6 +99,7 @@ frame_progress = 0.0
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1838708651]
 position = Vector2(1, 1)
+scale = Vector2(1.5004072, 2.2504835)
 shape = SubResource("CircleShape2D_bbnym")
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1089811854) index="0" unique_id=471519755]

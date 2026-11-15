@@ -23,6 +23,7 @@ signal textboxClosed
 signal endOfBattle
 signal playerDied
 signal enemyDied
+signal playerEscaped
 
 func _ready() -> void:
 	State.levelUp.connect(_on_level_up)
@@ -89,6 +90,7 @@ func enemy_turn():
 			if(currentPlayerHealth <= 0):
 				music.stop()
 				playedLostSound.play()
+				await playedLostSound
 				display_text("You died...")
 				await textboxClosed
 				
@@ -112,14 +114,21 @@ func _input(event):
 		textboxClosed.emit()
 
 func _on_run_pressed() -> void:
-	var successRate = [0,1].pick_random()
 	actionsPanel.hide()
+	
+	if(enemy.finalBoss == true):
+		display_text("You can't escape this!")
+		await textboxClosed
+		actionsPanel.show()
+		return
+	
+	var successRate = [0,1].pick_random()
 	
 	if(successRate == 1):
 		display_text("You escaped!")
 		await textboxClosed
 		await get_tree().create_timer(0.25).timeout
-		enemyDied.emit() # despawns the enemy, maybe change in the future?
+		playerEscaped.emit()
 		endOfBattle.emit() 
 		#get_tree().quit()
 	elif(successRate == 0):

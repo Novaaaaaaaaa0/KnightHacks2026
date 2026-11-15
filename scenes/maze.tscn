@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://b7kp7dnf163we" path="res://assets/sprites/Red flower.png" id="9_tmhqj"]
 [ext_resource type="Texture2D" uid="uid://1k48qodc80nm" path="res://assets/sprites/Green Flower.png" id="10_hipra"]
 [ext_resource type="Texture2D" uid="uid://bmryrk8lv5u71" path="res://assets/sprites/Blue flower.png" id="11_qhcyp"]
-[ext_resource type="PackedScene" uid="uid://b0e3u7cjfyamu" path="res://scenes/pause_gui.tscn" id="12_tmhqj"]
 [ext_resource type="PackedScene" uid="uid://cdvfhjgjtqg56" path="res://scenes/ghost.tscn" id="13_hipra"]
 [ext_resource type="AudioStream" uid="uid://dejeukbgffmu8" path="res://assets/Audio/To Her.mp3" id="14_qhcyp"]
 
@@ -9150,9 +9149,6 @@ ItemTexture = ExtResource("10_hipra")
 position = Vector2(936, -303)
 ItemColor = "blue"
 ItemTexture = ExtResource("11_qhcyp")
-
-[node name="PauseGUI" parent="." unique_id=1942708293 instance=ExtResource("12_tmhqj")]
-visible = false
 
 [node name="Ghost" parent="." unique_id=1381117601 instance=ExtResource("13_hipra")]
 position = Vector2(-679, -901)

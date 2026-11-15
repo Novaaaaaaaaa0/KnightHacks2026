@@ -77,7 +77,7 @@ enemyResource = ExtResource("2_pwo2h")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2145497591]
 use_parent_material = true
 sprite_frames = SubResource("SpriteFrames_ckn67")
-frame_progress = 0.3158268
+frame_progress = 0.24531929
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838708651]
 position = Vector2(-1, 6)

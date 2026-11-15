@@ -13,3 +13,4 @@ name = "Fully Faded Villager"
 texture = SubResource("AtlasTexture_sq84x")
 health = 200
 damage = 30
+finalBoss = true

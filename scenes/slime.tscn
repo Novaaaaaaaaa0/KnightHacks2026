@@ -87,6 +87,7 @@ animations = [{
 radius = 6.0827627
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4y2lm"]
+radius = 58.00862
 
 [sub_resource type="Animation" id="Animation_n6pvg"]
 length = 0.001
@@ -148,6 +149,7 @@ autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=471519755]
 position = Vector2(0, 6)
+scale = Vector2(0.2943602, 0.29772756)
 shape = SubResource("CircleShape2D_4y2lm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=34310901]

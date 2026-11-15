@@ -16,9 +16,18 @@ enum{
 @export var damage = 25
 @export var enemyName = "slime"
 @export var enemyResource: Resource = null
+
 var battle_started = false
 var state = WALKING
 var direction = Vector2.RIGHT
+var battle_instance
+
+func reset_enemy():
+	scale.x = 1.0
+	scale.y = 1.0
+	await get_tree().create_timer(4).timeout
+	$Area2D.monitoring = true
+	battle_started = false
 
 func _ready() -> void:
 	randomize()
@@ -59,10 +68,12 @@ func _on_timer_timeout() -> void:
 	timer.start()
 
 func start_battle():
-	var battle_instance = battle.instantiate()
+	battle_instance = battle.instantiate()
 	battle_instance.get_resource(enemyResource)
 	battle_instance.enemyDied.connect(_on_enemy_died)
 	battle_instance.playerDied.connect(_on_player_died)
+	battle_instance.playerEscaped.connect(_on_player_escaped)
+	
 	
 	var tree = get_tree()
 	if(tree == null):
@@ -101,3 +112,7 @@ func _on_enemy_died():
 
 func _on_player_died():
 	queue_free()
+
+func _on_player_escaped():
+	await battle_instance.tree_exited
+	reset_enemy()

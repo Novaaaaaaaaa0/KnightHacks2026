@@ -83,6 +83,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_veat2"]
+
 [node name="FadedJamie" unique_id=1381117601 instance=ExtResource("1_5xmk8")]
 enemyName = "jamie"
 enemyResource = ExtResource("2_65vyv")
@@ -93,7 +95,9 @@ animation = &"Left"
 frame_progress = 0.0
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1838708651]
-position = Vector2(-2, 4)
+position = Vector2(-2, 0)
+scale = Vector2(0.5792805, 0.8227737)
+shape = SubResource("CapsuleShape2D_veat2")
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1089811854) index="0" unique_id=471519755]
 position = Vector2(-1, -1)

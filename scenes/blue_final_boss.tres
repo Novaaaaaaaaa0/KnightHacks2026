@@ -11,3 +11,6 @@ region = Rect2(64, 1, 31, 32)
 script = ExtResource("1_6t1gn")
 name = "Fully Faded Villager"
 texture = SubResource("AtlasTexture_dl38t")
+health = 200
+damage = 30
+finalBoss = true
