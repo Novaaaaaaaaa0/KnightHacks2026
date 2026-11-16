@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://cvraxc5x6boht"]
+
+[ext_resource type="PackedScene" uid="uid://du68r3dcapk6b" path="res://scenes/slime.tscn" id="1_eaddb"]
+[ext_resource type="Resource" uid="uid://kefh2p617nso" path="res://scenes/faded_amy.tres" id="2_vgf6m"]
+[ext_resource type="Texture2D" uid="uid://cng2xmtayehdf" path="res://assets/sprites/Faded Villagers.png" id="4_6gpmu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x44x2"]
+atlas = ExtResource("4_6gpmu")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdotu"]
+atlas = ExtResource("4_6gpmu")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hqhq"]
+atlas = ExtResource("4_6gpmu")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vgjq"]
+atlas = ExtResource("4_6gpmu")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpkb2"]
+atlas = ExtResource("4_6gpmu")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cd4vx"]
+atlas = ExtResource("4_6gpmu")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0gwc"]
+atlas = ExtResource("4_6gpmu")
+region = Rect2(192, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vste"]
+atlas = ExtResource("4_6gpmu")
+region = Rect2(224, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yl6de"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_x44x2")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_bdotu")
+}],
+"loop": 1,
+"name": &"Back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_8hqhq")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_0vgjq")
+}],
+"loop": 1,
+"name": &"Front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_wpkb2")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_cd4vx")
+}],
+"loop": 1,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_n0gwc")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_8vste")
+}],
+"loop": 1,
+"name": &"Right",
+"speed": 5.0
+}]
+
+[node name="Faded Amy" unique_id=1381117601 instance=ExtResource("1_eaddb")]
+enemyName = "Faded Amy"
+enemyResource = ExtResource("2_vgf6m")
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=2145497591]
+sprite_frames = SubResource("SpriteFrames_yl6de")
+animation = &"Right"
+frame_progress = 0.0

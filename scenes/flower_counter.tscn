@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bwwbgv8ygd8rw"]
+
+[ext_resource type="Script" uid="uid://bnkdte0gelu42" path="res://flowerCounter.gd" id="1_8qjgq"]
+[ext_resource type="FontFile" uid="uid://b53lpgo8eeivr" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="2_3ydlg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ckn67"]
+font = ExtResource("2_3ydlg")
+font_size = 125
+
+[node name="flowerCounter" type="CanvasLayer" unique_id=324525670]
+script = ExtResource("1_8qjgq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=480083388]
+offset_right = 201.0
+offset_bottom = 130.0
+color = Color(0.6784314, 0.5019608, 1, 0.63529414)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=2024146309]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 174.0
+offset_bottom = 125.0
+text = "0/3"
+label_settings = SubResource("LabelSettings_ckn67")

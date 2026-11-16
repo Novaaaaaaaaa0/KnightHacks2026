@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://kefh2p617nso"]
+
+[ext_resource type="Script" uid="uid://cxfw3pu610vm" path="res://scripts/base_enemy.gd" id="1_yj440"]
+[ext_resource type="Texture2D" uid="uid://cng2xmtayehdf" path="res://assets/sprites/Faded Villagers.png" id="2_d6tcu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntode"]
+atlas = ExtResource("2_d6tcu")
+region = Rect2(5, 34, 23, 29)
+
+[resource]
+script = ExtResource("1_yj440")
+name = "Faded Villager"
+texture = SubResource("AtlasTexture_ntode")
+health = 150
+damage = 25

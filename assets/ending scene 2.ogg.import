@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://doxws3vvv5sc5"
+path="res://.godot/imported/ending scene 2.ogg-561017ad4209f1f5861215e06967e7ca.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/ending scene 2.ogg"
+dest_files=["res://.godot/imported/ending scene 2.ogg-561017ad4209f1f5861215e06967e7ca.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -3,13 +3,15 @@ extends Node2D
 signal save 
 signal load 
 signal delete
+signal newFlower
 signal level_complete
 
 @export var isInteractable: bool = false
 @export var currentInteraction: String = "none"
 @export var currentLevel: int
-@onready var numCollected = 0
+@export var numCollected = 0
 @onready var dialogue = preload("res://scenes/dialogue_manager.tscn")
+
 var dialogue_manager
 var active_scene
 var lines: Array[String] = []
@@ -24,8 +26,6 @@ func _ready() -> void:
 func _input(event):
 	var activeScene = get_tree().current_scene
 	
-	if (get_tree().current_scene.scene_file_path == "res://scenes/titlescreen.tscn"):
-		return
 	if activeScene != null:	
 		if isInteractable == true && Input.is_action_just_pressed("Interaction"):
 			match currentInteraction:
@@ -33,16 +33,19 @@ func _input(event):
 					if(flowerCollected[0] == false):
 						print("Interacted with Red Flower")
 						numCollected += 1
+						newFlower.emit()
 						flowerCollected[0] = true
 				"green":
 					if(flowerCollected[1] == false):
 						print("Interacted with Green Flower")
 						numCollected += 1
+						newFlower.emit()
 						flowerCollected[1] = true
 				"blue":
 					if(flowerCollected[2] == false):
 						print("Interacted with Blue Flower")
 						numCollected += 1
+						newFlower.emit()
 						flowerCollected[2] = true
 				"teleport":
 					if numCollected == 3:
@@ -111,9 +114,9 @@ func run_dialogue():
 				lines = get_lines("res://scripts/Dialogue/lvl2end.txt")
 		3:
 			if(numCollected != 3):
-				pass
+				lines = get_lines("res://scripts/Dialogue/lvl3start.txt")
 			else:
-				pass
+				lines = get_lines("res://scripts/Dialogue/lvl3end.txt")
 	#if(lines != null):
 	dialogue_manager.start_dialogue(lines);
 	isInteractable = false

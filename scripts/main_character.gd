@@ -12,7 +12,7 @@ signal playerDied
 
 func get_input() -> void:
 	var input_direction = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
-	velocity = input_direction * speed
+	velocity = input_direction.normalized() * speed
 
 func _physics_process(_delta: float) -> void:
 	get_input()
@@ -40,22 +40,22 @@ func _process(_delta) -> void:
 				
 	elif moving:
 		#moving down
-		step.stream
-		if Input.is_action_pressed("moveDown"):
-			gretta_sprite.play("Front Walking")	
-			direction = "down"
-		# moving up
-		if Input.is_action_pressed("moveUp"):
-			gretta_sprite.play("Back Walking")
-			direction = "up"
-		# moving left
-		if Input.is_action_pressed("moveLeft"):
+		if velocity.x < 0:
 			gretta_sprite.play("Left Walking")
 			direction = "left"
 		# moving right
-		if Input.is_action_pressed("moveRight"):
+		elif velocity.x > 0:
 			gretta_sprite.play("Right Walking")
 			direction = "right"
+		elif velocity.y > 0:
+			gretta_sprite.play("Front Walking")	
+			direction = "down"
+		# moving up
+		elif velocity.y < 0:
+			gretta_sprite.play("Back Walking")
+			direction = "up"
+		# moving left
+	
 	
 	else:
 		step.stream_paused
