@@ -92,8 +92,9 @@ func load_next_level():
 				
 			3:
 				CompletionManager.level3Complete.emit(3)
+				LevelSwitch.change_level("res://scenes/test_map.tscn")
+			4:
 				LevelSwitch.change_level("res://scenes/credits.tscn")
-				pass
 
 func _deferred_dialogue():
 	if get_tree().current_scene:

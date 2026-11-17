@@ -6762,6 +6762,43 @@ size = Vector2(20, 1012)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y2lm"]
 size = Vector2(1031, 20)
 
+[sub_resource type="Animation" id="Animation_bpvkl"]
+resource_name = "Flowers Collected"
+length = 2.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Completion/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.52, 1.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jtyid"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Completion/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k8xbk"]
+_data = {
+&"Flowers Collected": SubResource("Animation_bpvkl"),
+&"RESET": SubResource("Animation_jtyid")
+}
+
 [node name="fightLevel" type="Node2D" unique_id=427986451]
 material = ExtResource("1_b10tt")
 position = Vector2(2, 0)
@@ -6901,3 +6938,17 @@ position = Vector2(521, -14)
 
 [node name="Slime9" parent="enemies" unique_id=1513419680 instance=ExtResource("16_esdpv")]
 position = Vector2(104, 374)
+
+[node name="Completion" type="CanvasLayer" parent="." unique_id=348663479]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Completion" unique_id=477230081]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Flowers Collected" type="AnimationPlayer" parent="." unique_id=1598530918]
+libraries/ = SubResource("AnimationLibrary_k8xbk")

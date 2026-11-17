@@ -9110,6 +9110,43 @@ physics_layer_2/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1nuxl")
 sources/1 = SubResource("TileSetAtlasSource_ugm30")
 
+[sub_resource type="Animation" id="Animation_bpvkl"]
+resource_name = "Flowers Collected"
+length = 2.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Completion/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.52, 1.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jtyid"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Completion/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o00fa"]
+_data = {
+&"Flowers Collected": SubResource("Animation_bpvkl"),
+&"RESET": SubResource("Animation_jtyid")
+}
+
 [node name="maze" type="Node2D" unique_id=543356034]
 material = ExtResource("1_ykl68")
 script = ExtResource("1_vqf1n")
@@ -9162,35 +9199,44 @@ position = Vector2(936, -322)
 ItemColor = "blue"
 ItemTexture = ExtResource("11_qhcyp")
 
-[node name="Ghost" parent="." unique_id=1381117601 instance=ExtResource("13_hipra")]
+[node name="Enemies" type="Node2D" parent="." unique_id=2038765600]
+use_parent_material = true
+
+[node name="Ghost" parent="Enemies" unique_id=1381117601 instance=ExtResource("13_hipra")]
 position = Vector2(-679, -901)
 
-[node name="Ghost2" parent="." unique_id=2007800937 instance=ExtResource("13_hipra")]
+[node name="Ghost2" parent="Enemies" unique_id=2007800937 instance=ExtResource("13_hipra")]
 position = Vector2(-175, -770)
 
-[node name="Ghost3" parent="." unique_id=1033678654 instance=ExtResource("13_hipra")]
+[node name="Ghost3" parent="Enemies" unique_id=1033678654 instance=ExtResource("13_hipra")]
 position = Vector2(761, -643)
 
-[node name="Ghost4" parent="." unique_id=859737829 instance=ExtResource("13_hipra")]
+[node name="Ghost4" parent="Enemies" unique_id=859737829 instance=ExtResource("13_hipra")]
 position = Vector2(580, -903)
 
-[node name="Ghost5" parent="." unique_id=781192107 instance=ExtResource("13_hipra")]
+[node name="Ghost5" parent="Enemies" unique_id=781192107 instance=ExtResource("13_hipra")]
 position = Vector2(739, -14)
 
-[node name="Ghost6" parent="." unique_id=1177469339 instance=ExtResource("13_hipra")]
+[node name="Ghost6" parent="Enemies" unique_id=1177469339 instance=ExtResource("13_hipra")]
 position = Vector2(-543, -381)
 
-[node name="Ghost7" parent="." unique_id=388485086 instance=ExtResource("13_hipra")]
+[node name="Ghost7" parent="Enemies" unique_id=388485086 instance=ExtResource("13_hipra")]
 position = Vector2(-165, -188)
 
-[node name="Ghost8" parent="." unique_id=1139490787 instance=ExtResource("13_hipra")]
+[node name="Ghost8" parent="Enemies" unique_id=1139490787 instance=ExtResource("13_hipra")]
 position = Vector2(287, -491)
 
-[node name="Ghost9" parent="." unique_id=1368138261 instance=ExtResource("13_hipra")]
+[node name="Ghost9" parent="Enemies" unique_id=1368138261 instance=ExtResource("13_hipra")]
 position = Vector2(-196, -977)
 
-[node name="fadingGirlNewPos" type="Marker2D" parent="." unique_id=222005699]
-position = Vector2(789, -938)
+[node name="Faded Amy" parent="Enemies" unique_id=1236733921 instance=ExtResource("14_har6y")]
+position = Vector2(959, -150)
+
+[node name="FadedJamie" parent="Enemies" unique_id=1654479889 instance=ExtResource("15_tri1n")]
+position = Vector2(-680, -566)
+
+[node name="Faded Bailey" parent="Enemies" unique_id=1659319639 instance=ExtResource("16_tri1n")]
+position = Vector2(627, -245)
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=659655669]
 process_mode = 3
@@ -9198,14 +9244,8 @@ stream = ExtResource("13_ixd5k")
 volume_db = -20.0
 autoplay = true
 
-[node name="Faded Amy" parent="." unique_id=1236733921 instance=ExtResource("14_har6y")]
-position = Vector2(959, -150)
-
-[node name="FadedJamie" parent="." unique_id=1654479889 instance=ExtResource("15_tri1n")]
-position = Vector2(-680, -566)
-
-[node name="Faded Bailey" parent="." unique_id=1659319639 instance=ExtResource("16_tri1n")]
-position = Vector2(627, -245)
+[node name="fadingGirlNewPos" type="Marker2D" parent="." unique_id=222005699]
+position = Vector2(789, -938)
 
 [node name="waterfall1" type="AudioStreamPlayer2D" parent="." unique_id=2074886721]
 position = Vector2(936, -981)
@@ -9218,3 +9258,17 @@ stream = ExtResource("17_fqwfw")
 autoplay = true
 
 [node name="flowerCounter" parent="." unique_id=324525670 instance=ExtResource("18_fqwfw")]
+
+[node name="Completion" type="CanvasLayer" parent="." unique_id=1760449343]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Completion" unique_id=1322271249]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Flowers Collected" type="AnimationPlayer" parent="." unique_id=227213854]
+libraries/ = SubResource("AnimationLibrary_o00fa")

@@ -207,6 +207,7 @@ autoplay = true
 visible = false
 
 [node name="Completion" type="CanvasLayer" parent="." unique_id=11797095]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Completion" unique_id=1014347568]
 modulate = Color(1, 1, 1, 0)
