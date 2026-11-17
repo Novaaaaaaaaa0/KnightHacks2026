@@ -57,6 +57,15 @@ func _input(event):
 						timer.start()
 						await timer.timeout
 						load_next_level()
+					elif numCollected == -1:
+						var timer: Timer
+						timer = Timer.new()
+						get_tree().current_scene.add_child(timer)
+						timer.wait_time = 1.0
+						timer.one_shot = true
+						timer.start()
+						await timer.timeout
+						load_next_level()
 				"fading_girl":
 					#dialogue_manager.is_dialogue_active = true
 					#get_viewport().set_input_as_handled()
@@ -118,7 +127,8 @@ func run_dialogue():
 				lines = get_lines("res://scripts/Dialogue/lvl3start.txt")
 			else:
 				lines = get_lines("res://scripts/Dialogue/lvl3end.txt")
-	#if(lines != null):
+		4:
+			lines = get_lines("res://scripts/Dialogue/lvl4.txt")
 	dialogue_manager.start_dialogue(lines);
 	isInteractable = false
 	

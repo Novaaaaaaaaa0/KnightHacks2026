@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://c0eoaubwv71k2" path="res://assets/sprites/Normal Bailey.png" id="7_pw728"]
 [ext_resource type="PackedScene" uid="uid://dwfcvqgry0gcy" path="res://scenes/end_of_level.tscn" id="9_6gsqv"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ulkk"]
+
 [node name="Test Map" type="Node2D" unique_id=825099094]
 script = ExtResource("1_pw728")
 
@@ -57,19 +59,37 @@ tile_set = ExtResource("1_bdpbv")
 
 [node name="Villagers" type="Node2D" parent="." unique_id=1985886444]
 
-[node name="Jamie" type="Sprite2D" parent="Villagers" unique_id=1403197229]
-position = Vector2(400, 312)
+[node name="Jamie" type="StaticBody2D" parent="Villagers" unique_id=1799363785]
+position = Vector2(399, 312)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/Jamie" unique_id=2051546631]
+shape = SubResource("CapsuleShape2D_8ulkk")
+
+[node name="JamieSprite" type="Sprite2D" parent="Villagers/Jamie/CollisionShape2D" unique_id=1403197229]
+position = Vector2(1, 0)
 texture = ExtResource("5_6gsqv")
 
-[node name="Amy" type="Sprite2D" parent="Villagers" unique_id=1846279418]
-position = Vector2(512, 314)
+[node name="Amy" type="StaticBody2D" parent="Villagers" unique_id=60284962]
+position = Vector2(513, 313)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/Amy" unique_id=744651096]
+shape = SubResource("CapsuleShape2D_8ulkk")
+
+[node name="AmySprite" type="Sprite2D" parent="Villagers/Amy/CollisionShape2D" unique_id=1846279418]
+position = Vector2(-1, 1)
 texture = ExtResource("6_kddbv")
 
-[node name="Bailey" type="Sprite2D" parent="Villagers" unique_id=493245605]
-position = Vector2(625, 311)
+[node name="Bailey" type="StaticBody2D" parent="Villagers" unique_id=961606781]
+position = Vector2(625, 313)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/Bailey" unique_id=1791954808]
+shape = SubResource("CapsuleShape2D_8ulkk")
+
+[node name="BaileySprite" type="Sprite2D" parent="Villagers/Bailey" unique_id=493245605]
+position = Vector2(0, -2)
 texture = ExtResource("7_pw728")
 
-[node name="FadingGirl" parent="." unique_id=1942408733 instance=ExtResource("7_kddbv")]
+[node name="FadingGirl" parent="Villagers" unique_id=1942408733 instance=ExtResource("7_kddbv")]
 position = Vector2(724, 333)
 
 [node name="EndOfLevel" parent="." unique_id=670383800 instance=ExtResource("9_6gsqv")]

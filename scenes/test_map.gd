@@ -10,6 +10,7 @@ func _ready() -> void:
 	var gretta = $mainCharacter/CollisionShape2D/AnimatedSprite2D
 	gretta.play("Front Standing")
 	GlobalVars.level_complete.connect(_on_level_complete)
+	GlobalVars.numCollected = -1
 	GlobalVars.currentLevel = 4
 	GlobalVars.currentInteraction = "none"
 	GlobalVars.isInteractable = false
