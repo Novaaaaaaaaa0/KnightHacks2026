@@ -23,6 +23,8 @@ func _ready() -> void:
 
 func _on_level_complete()->void: 
 	material = null
+	$"Flowers Collected".play("Flowers Collected")
+	await $"Flowers Collected".animation_finished
 	endOfLevel.activated()
 	fadingGirl.global_position = fgEndPos.global_position
 	pass

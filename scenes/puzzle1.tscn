@@ -25,6 +25,43 @@
 font = ExtResource("17_f6mps")
 font_size = 100
 
+[sub_resource type="Animation" id="Animation_bpvkl"]
+resource_name = "Flowers Collected"
+length = 2.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Completion/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.52, 1.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jtyid"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Completion/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gr5le"]
+_data = {
+&"Flowers Collected": SubResource("Animation_bpvkl"),
+&"RESET": SubResource("Animation_jtyid")
+}
+
 [node name="Puzzles" type="Node2D" unique_id=378654457]
 material = ExtResource("1_voev6")
 script = ExtResource("2_mjqgh")
@@ -92,24 +129,6 @@ script = null
 [node name="fadingGirlNewPos" type="Marker2D" parent="." unique_id=1308520579]
 position = Vector2(338, -739)
 
-[node name="Slime" parent="." unique_id=1666948179 instance=ExtResource("14_2kv06")]
-position = Vector2(-868, -751)
-
-[node name="Slime2" parent="." unique_id=1381117601 instance=ExtResource("14_2kv06")]
-position = Vector2(-148, -839)
-
-[node name="Slime3" parent="." unique_id=1120721537 instance=ExtResource("14_2kv06")]
-position = Vector2(-673, 578)
-
-[node name="Slime4" parent="." unique_id=126494689 instance=ExtResource("14_2kv06")]
-position = Vector2(164, 597)
-
-[node name="Slime5" parent="." unique_id=944651143 instance=ExtResource("14_2kv06")]
-position = Vector2(752, 475)
-
-[node name="Slime6" parent="." unique_id=1338366475 instance=ExtResource("14_2kv06")]
-position = Vector2(700, -773)
-
 [node name="Timer" type="Timer" parent="." unique_id=1168014352]
 one_shot = true
 
@@ -119,13 +138,34 @@ stream = ExtResource("14_shtpt")
 volume_db = -20.0
 autoplay = true
 
-[node name="FadedJamie" parent="." unique_id=262754871 instance=ExtResource("15_683ma")]
+[node name="Enemies" type="Node2D" parent="." unique_id=1544743343]
+use_parent_material = true
+
+[node name="Slime" parent="Enemies" unique_id=1666948179 instance=ExtResource("14_2kv06")]
+position = Vector2(-868, -751)
+
+[node name="Slime2" parent="Enemies" unique_id=1381117601 instance=ExtResource("14_2kv06")]
+position = Vector2(-148, -839)
+
+[node name="Slime3" parent="Enemies" unique_id=1120721537 instance=ExtResource("14_2kv06")]
+position = Vector2(-673, 578)
+
+[node name="Slime4" parent="Enemies" unique_id=126494689 instance=ExtResource("14_2kv06")]
+position = Vector2(164, 597)
+
+[node name="Slime5" parent="Enemies" unique_id=944651143 instance=ExtResource("14_2kv06")]
+position = Vector2(752, 475)
+
+[node name="Slime6" parent="Enemies" unique_id=1338366475 instance=ExtResource("14_2kv06")]
+position = Vector2(700, -773)
+
+[node name="FadedJamie" parent="Enemies" unique_id=262754871 instance=ExtResource("15_683ma")]
 position = Vector2(-272, -463)
 
-[node name="Faded Amy" parent="." unique_id=1163875930 instance=ExtResource("18_f6mps")]
+[node name="Faded Amy" parent="Enemies" unique_id=1163875930 instance=ExtResource("18_f6mps")]
 position = Vector2(-593, 17)
 
-[node name="Faded Bailey" parent="." unique_id=1990958986 instance=ExtResource("16_dxbwv")]
+[node name="Faded Bailey" parent="Enemies" unique_id=1990958986 instance=ExtResource("16_dxbwv")]
 position = Vector2(306, -292)
 
 [node name="Town" type="TileMapLayer" parent="." unique_id=1962404369]
@@ -165,3 +205,16 @@ autoplay = true
 
 [node name="flowerCounter" parent="." unique_id=324525670 instance=ExtResource("20_bpvkl")]
 visible = false
+
+[node name="Completion" type="CanvasLayer" parent="." unique_id=11797095]
+
+[node name="ColorRect" type="ColorRect" parent="Completion" unique_id=1014347568]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Flowers Collected" type="AnimationPlayer" parent="." unique_id=1618317602]
+libraries/ = SubResource("AnimationLibrary_gr5le")
