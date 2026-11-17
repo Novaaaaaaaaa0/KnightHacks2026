@@ -3,7 +3,7 @@ extends Node
 var current_health = 100
 var max_health = 100
 var damage = 25
-var enemiesDefeated = 4
+var enemiesDefeated = 0
 var healLvlUp = 0
 
 signal levelUp
