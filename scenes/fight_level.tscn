@@ -6893,6 +6893,7 @@ autoplay = true
 [node name="flowerCounter" parent="." unique_id=324525670 instance=ExtResource("23_k8xbk")]
 
 [node name="enemies" type="Node2D" parent="." unique_id=1009038848]
+use_parent_material = true
 
 [node name="Slime" parent="enemies" unique_id=1205868009 instance=ExtResource("16_esdpv")]
 position = Vector2(480, -158)

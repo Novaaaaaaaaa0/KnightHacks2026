@@ -14,6 +14,10 @@ func _ready() -> void:
 	GlobalVars.currentLevel = 1
 	GlobalVars.currentInteraction = "none"
 	GlobalVars.isInteractable = false
+	GlobalVars.numCollected = 0
+	GlobalVars.flowerCollected[0] = false
+	GlobalVars.flowerCollected[1] = false
+	GlobalVars.flowerCollected[2] = false
 	
 	var cam = $mainCharacter/Camera2D
 	cam.set_limit(SIDE_LEFT, int($leftLimit.position.x))

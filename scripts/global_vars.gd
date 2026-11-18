@@ -35,18 +35,21 @@ func _input(event):
 						numCollected += 1
 						newFlower.emit()
 						flowerCollected[0] = true
+						check_level_completion()
 				"green":
 					if(flowerCollected[1] == false):
 						print("Interacted with Green Flower")
 						numCollected += 1
 						newFlower.emit()
 						flowerCollected[1] = true
+						check_level_completion()
 				"blue":
 					if(flowerCollected[2] == false):
 						print("Interacted with Blue Flower")
 						numCollected += 1
 						newFlower.emit()
 						flowerCollected[2] = true
+						check_level_completion()
 				"teleport":
 					if numCollected == 3:
 						var timer: Timer
@@ -72,7 +75,7 @@ func _input(event):
 					print("Interacted with fading girl")
 					run_dialogue()
 					
-			check_level_completion()
+			#check_level_completion()
 		elif Input.is_action_just_pressed("Interaction"):
 			print("Nothing to interact with.")
 				

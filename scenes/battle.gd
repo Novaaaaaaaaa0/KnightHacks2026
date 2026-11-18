@@ -165,7 +165,7 @@ func _on_attack_pressed() -> void:
 			await get_tree().create_timer(0.3).timeout
 			PauseGui.isPauseable = true
 			enemyDied.emit()
-			if ((State.enemiesDefeated+ 1) % 5 == 0):
+			if ((State.enemiesDefeated) % 5 == 0):
 				display_text("You leveled up!")
 				await textboxClosed
 			endOfBattle.emit()

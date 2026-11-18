@@ -14,6 +14,10 @@ func _ready() -> void:
 	gretta.play("Front Standing")
 	GlobalVars.level_complete.connect(_on_level_complete)
 	GlobalVars.currentLevel = 2
+	GlobalVars.numCollected = 0
+	GlobalVars.flowerCollected[0] = false
+	GlobalVars.flowerCollected[1] = false
+	GlobalVars.flowerCollected[2] = false
 	
 	var cam = $mainCharacter/Camera2D
 	cam.set_limit(SIDE_LEFT, int($leftLimit.position.x))

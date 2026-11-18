@@ -9,7 +9,7 @@ var healLvlUp = 0
 signal levelUp
 
 func level_up():
-	current_health += 15
+	current_health = max_health + 15
 	damage += 10
 	max_health += 15
 	levelUp.emit()

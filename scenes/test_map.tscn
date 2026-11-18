@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://0nah6nckoxm1" path="res://scenes/fading_girl.tscn" id="7_kddbv"]
 [ext_resource type="Texture2D" uid="uid://c0eoaubwv71k2" path="res://assets/sprites/Normal Bailey.png" id="7_pw728"]
 [ext_resource type="PackedScene" uid="uid://dwfcvqgry0gcy" path="res://scenes/end_of_level.tscn" id="9_6gsqv"]
+[ext_resource type="AudioStream" uid="uid://dejeukbgffmu8" path="res://assets/Audio/To Her.mp3" id="10_u56q5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ulkk"]
 
@@ -94,3 +95,7 @@ position = Vector2(724, 333)
 
 [node name="EndOfLevel" parent="." unique_id=670383800 instance=ExtResource("9_6gsqv")]
 position = Vector2(824, 398)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2118320033]
+stream = ExtResource("10_u56q5")
+volume_db = -10.915

@@ -75,6 +75,10 @@ func _on_player_died() -> void:
 	#get_tree().paused = true
 	deathScreen.visible = true
 	animationPlayer.play("death")
+	GlobalVars.numCollected = 0
+	GlobalVars.flowerCollected[0] = false
+	GlobalVars.flowerCollected[1] = false
+	GlobalVars.flowerCollected[2] = false
 	await animationPlayer.animation_finished
 	$Death/Control.modulate.a = 1.0
 	get_tree().paused = true
