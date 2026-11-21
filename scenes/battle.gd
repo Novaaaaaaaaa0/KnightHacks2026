@@ -30,6 +30,7 @@ func _ready() -> void:
 	
 	actionsPanel.hide()
 	if(activeBattle == true):
+		State.current_health = State.max_health
 		PauseGui.isPauseable = false
 		set_health(playerProgressBar,State.current_health, State.max_health)
 		set_health(enemyProgressBar, enemy.health, enemy.health)
@@ -98,7 +99,8 @@ func enemy_turn():
 				State.current_health = currentPlayerHealth
 				playerDied.emit()
 				endOfBattle.emit()
-				#get_tree().quit() # CHANGE EVERY INSTANCE OF THIS TO SIMPLY FREE THE SCENE
+			
+			actionsPanel.show()
 				
 			
 		elif(success == 0):
@@ -200,11 +202,6 @@ func _on_end_of_battle() -> void:
 	tree.root.add_child(old_scene)
 	battle_scene.queue_free()
 	tree.current_scene = old_scene
-	#battle_scene.queue_free()
-	# NOT SAVING OLD SCENE CORRECTLY
-	# INSTEAD JUST PLAYS BATTLE SCENE AGAIN
-	# MUST FIX!!!!!!!!!!!!!!!!!!!!
-	#get_tree().quit()
 	pass
 
 

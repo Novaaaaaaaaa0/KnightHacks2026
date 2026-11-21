@@ -82,6 +82,3 @@ func _on_player_died() -> void:
 	await animationPlayer.animation_finished
 	$Death/Control.modulate.a = 1.0
 	get_tree().paused = true
-	# CURRENTLY THE DEATH SCREEN IS NOT VISIBLE AFTER THE ANIMATION
-	# FIX THIS!!!!!!!!!!!!!!!!!!!!!!
-	#deathScreen.visible = true

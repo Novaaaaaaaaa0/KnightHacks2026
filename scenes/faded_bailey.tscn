@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://du68r3dcapk6b" path="res://scenes/slime.tscn" id="1_iaxsu"]
 [ext_resource type="Texture2D" uid="uid://cng2xmtayehdf" path="res://assets/sprites/Faded Villagers.png" id="2_2rl5a"]
+[ext_resource type="Resource" uid="uid://cetw5rpdyj2b4" path="res://scenes/faded_bailey.tres" id="2_pt27f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pt27f"]
 atlas = ExtResource("2_2rl5a")
@@ -82,9 +83,19 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_byxix"]
+
 [node name="Faded Bailey" unique_id=1381117601 instance=ExtResource("1_iaxsu")]
+enemyResource = ExtResource("2_pt27f")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=2145497591]
 sprite_frames = SubResource("SpriteFrames_ek68u")
 animation = &"Left"
 frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1838708651]
+position = Vector2(-2, 4)
+shape = SubResource("CapsuleShape2D_byxix")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1089811854) index="0" unique_id=471519755]
+position = Vector2(-2, 5)
